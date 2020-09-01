@@ -1,10 +1,19 @@
+.home {
+  color: yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .home-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  }
-  
-  .home-list a{
-    margin: 1rem 2rem;
-    text-decoration: none;
-  }
+}
+
+.home-list a {
+  margin: 1rem 2rem;
+  text-decoration: none;
+}

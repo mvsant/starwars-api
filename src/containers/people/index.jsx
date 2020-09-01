@@ -7,7 +7,6 @@ function People() {
   const [data, setData] = React.useState([]);
   const [page, setPage] = React.useState(1);
   const [loading, setLoading] = React.useState(true);
-  //const loading = true
   const results = data.results;
   const list = [];
 
@@ -23,7 +22,7 @@ function People() {
   }
 
   return (
-    <>
+    <div className="list-container">
       <Select counter={data.count} onChange={(e) => setPage(e.target.value)} />
       {loading === true
         ? "loading"
@@ -44,7 +43,7 @@ function People() {
               imageList={[item[8], item[9], item[10], item[11], item[12]]}
             />
           ))}
-    </>
+    </div>
   );
 }
 

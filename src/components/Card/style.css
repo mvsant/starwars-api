@@ -1,6 +1,7 @@
 .card {
-  background-color: thistle;
-  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.856);
+  border: 1px solid #13d3ed;
+  border-radius: 2%;
   width: 7rem;
   padding: 15%;
   display: block;
@@ -8,5 +9,6 @@
 
 .card-image {
   height: 100%;
+  margin-top: 0.5rem;
   width: 100%;
 }

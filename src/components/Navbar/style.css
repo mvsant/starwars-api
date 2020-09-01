@@ -1,6 +1,6 @@
 .topTitle {
-  width: 40%;
-  height: 40%;
+  width: 50%;
+  height: 50%;
   transform: perspective(200px) rotateX(40deg);
 }
 
@@ -18,4 +18,12 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
+}
+
+a {
+  color: white;
+}
+
+a:visited {
+  color: gray;
 }

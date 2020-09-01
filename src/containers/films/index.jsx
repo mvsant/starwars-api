@@ -1,43 +1,42 @@
 import React from "react";
 import { nestByPage } from "../../utils/api";
 import Select from "../../components/Select";
-import List from "../../components/List";
+import Panel from "../../components/Panel";
 
 function Films() {
   const [data, setData] = React.useState([]);
   const [page, setPage] = React.useState(1);
+  const [loading, setLoading] = React.useState(true);
+
   const results = data.results;
-  //const loading = true;
-  const list = []
+  const list = [];
+
+  React.useEffect(() => {}, [page]);
 
   React.useEffect(() => {
+    setLoading(true);
     nestByPage(setData, "films", page);
+    setLoading(false);
   }, [page]);
 
   for (const item in results) {
-    list.push(
-      <>
-        {Object.entries(results[item]).map((sub, index) => (
-          index === 6 || index === 7 || index === 8 || index === 9 || index === 10 ?
-            <List title={sub[0]} list={sub[1]} />
-            :
-            <div key={index}>
-              {sub[0]} :{sub[1].length === 0 ? 'N/A' : sub[1]}
-              <br />
-            </div>
-        ))}
-        <hr />
-      </>
-    )
+    list.push(Object.entries(results[item]));
   }
 
-
   return (
-    <>
-      <h1>Films component</h1>
+    <div className="list-container">
       <Select counter={data.count} onChange={(e) => setPage(e.target.value)} />
-      {results && list}
-    </>
+      {loading === true
+        ? "loading"
+        : results &&
+          list.map((item) => (
+            <Panel
+              image={item[13][1]}
+              list={[item[0], item[1], item[2], item[3], item[4], item[5]]}
+              imageList={[item[6], item[7], item[8], item[9], item[10]]}
+            />
+          ))}
+    </div>
   );
 }
 

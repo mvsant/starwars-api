@@ -47,14 +47,16 @@
 .image-list .list {
   border: 2px solid white;
   padding: 1.5%;
-  border-radius: 5% 5%;
+  border-radius: 2%;
   background-color: rgba(255, 255, 255, 0.8);
   color: black;
 }
 
 .list ul {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .list ul li {

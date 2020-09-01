@@ -1,4 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Karla", sans-serif;
   background-image: url(../assets/bg.jpg);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.list-container select {
 }

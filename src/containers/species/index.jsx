@@ -1,50 +1,53 @@
 import React from "react";
 import { nestByPage } from "../../utils/api";
 import Select from "../../components/Select";
-import List from "../../components/List";
 import Panel from "../../components/Panel";
-import { imagesReferences } from "../../utils/imagesReferences";
-import './style.css'
+import "./style.css";
 
 function Species() {
   const [data, setData] = React.useState([]);
   const [page, setPage] = React.useState(1);
+  const [loading, setLoading] = React.useState(true);
   const results = data.results;
-  //const loading = true;
-  const list = []
+  const list = [];
 
   React.useEffect(() => {
-    nestByPage(setData, "starships", page);
+    setLoading(true);
+    nestByPage(setData, "species", page);
+    setLoading(false);
   }, [page]);
 
   for (const item in results) {
-    list.push(
-      <>
-        {Object.entries(results[item]).map((sub, index) => (
-          index === 17 ?
-            <img className="poster-mini" src={imagesReferences(sub[1])} alt={data.name} />
-            :
-            index === 14 ?
-              <List title={sub[0]} list={sub[1]} />
-              :
-              <div key={index}>
-                {sub[0]} :{sub[1].length === 0 ? 'N/A' : sub[1]}
-                <br />
-              </div>
-        ))}
-        <Panel />
-        <hr />
-      </>
-    )
+    list.push(Object.entries(results[item]));
   }
 
-
   return (
-    <>
-      <h1>Species component</h1>
+    <div className="list-container">
       <Select counter={data.count} onChange={(e) => setPage(e.target.value)} />
-      {results && list}
-    </>
+      {loading === true
+        ? "loading"
+        : results &&
+          list.map((item) => (
+            <>
+              <Panel
+                image={item[14][1]}
+                list={[
+                  item[0],
+                  item[1],
+                  item[2],
+                  item[3],
+                  item[4],
+                  item[5],
+                  item[6],
+                  item[7],
+                  item[8],
+                  item[9],
+                ]}
+                imageList={[item[10], item[11]]}
+              />
+            </>
+          ))}
+    </div>
   );
 }
 

@@ -1,22 +1,23 @@
-import React from 'react'
-import Miniatures from '../Miniatures';
-import { mask } from '../../utils/masks';
+import React from "react";
+import Miniatures from "../Miniatures";
+import { mask } from "../../utils/masks";
 
 function List(props) {
-  const { list, title } = props
+  const { list, title } = props;
 
   return (
-    <div className='list'>
+    <div className="list">
       {mask(title)} :
       <ul>
-        {list.length === 0 ? 'N/A'
+        {list.length === 0
+          ? "N/A"
           : list.map((item, index) => (
-            <li key={index + Math.random()}>
-              <Miniatures link={item} />
-            </li>
-          ))}
+              <li key={index + Math.random()}>
+                <Miniatures link={item} />
+              </li>
+            ))}
       </ul>
     </div>
-  )
+  );
 }
 export default List;
