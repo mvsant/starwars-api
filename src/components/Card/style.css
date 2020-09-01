@@ -1,0 +1,12 @@
+.card {
+  background-color: thistle;
+  border: 1px solid black;
+  width: 7rem;
+  padding: 15%;
+  display: block;
+}
+
+.card-image {
+  height: 100%;
+  width: 100%;
+}

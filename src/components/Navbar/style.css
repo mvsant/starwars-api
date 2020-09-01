@@ -1,0 +1,21 @@
+.topTitle {
+  width: 40%;
+  height: 40%;
+  transform: perspective(200px) rotateX(40deg);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
