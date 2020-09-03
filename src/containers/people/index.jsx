@@ -41,6 +41,8 @@ function People() {
                 item[7],
               ]}
               imageList={[item[8], item[9], item[10], item[11], item[12]]}
+              origin="people"
+              id={1}
             />
           ))}
     </div>

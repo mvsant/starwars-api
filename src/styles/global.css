@@ -2,6 +2,7 @@
 body {
   font-family: "Karla", sans-serif;
   background-image: url(../assets/bg.jpg);
+  font-size: 1.2rem;
 }
 
 h1 {

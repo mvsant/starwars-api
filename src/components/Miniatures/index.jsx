@@ -1,23 +1,27 @@
-import React from 'react'
-import { indexFullPath } from '../../utils/api'
-import { imagesReferences } from '../../utils/imagesReferences'
-import './style.css'
+import React from "react";
+import { indexFullPath } from "../../utils/api";
+import { imagesReferences } from "../../utils/references/imagesReferences";
+import "./style.css";
 
 function Miniatures(props) {
-  const { link } = props
-  const [data, setData] = React.useState('')
+  const { link } = props;
+  const [data, setData] = React.useState("");
 
   React.useEffect(() => {
-    indexFullPath(setData, link)
-  }, [link])
-
+    indexFullPath(setData, link);
+  }, [link]);
 
   //  new RegExp('\\b' + myWord + '\\b')
 
   return (
     <>
-      <img className="avatar" src={imagesReferences(link)} alt={data.name || data.title} />
+      <img
+        className="avatar"
+        src={imagesReferences(link)}
+        alt={data.name || data.title}
+      />
       <h6>{data.name || data.title}</h6>
-    </>)
+    </>
+  );
 }
-export default Miniatures
+export default Miniatures;

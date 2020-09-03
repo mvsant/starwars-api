@@ -1,6 +1,6 @@
 import React from "react";
 import Miniatures from "../Miniatures";
-import { mask } from "../../utils/masks";
+import { mask } from "../../utils/helpers/masks";
 
 function List(props) {
   const { list, title } = props;

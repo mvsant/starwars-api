@@ -1,10 +1,10 @@
 import React from "react";
 import { index, baseUrl } from "../../utils/api";
 import { Link } from "react-router-dom";
-import { urlMask, namesMask } from "../../utils/masks";
+import { urlMask, namesMask } from "../../utils/helpers/masks";
 import Card from "../../components/Card";
 import "./style.css";
-import { imagesReferences } from "../../utils/imagesReferences";
+import { imagesReferences } from "../../utils/references/imagesReferences";
 
 function Home() {
   let [data, setData] = React.useState(""); // state hook

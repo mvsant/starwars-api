@@ -20,10 +20,10 @@ nav ul li a {
   text-decoration: none;
 }
 
-a {
-  color: white;
+header a {
+  color: yellow;
 }
 
-a:visited {
-  color: gray;
+header a:visited {
+  color: gold;
 }

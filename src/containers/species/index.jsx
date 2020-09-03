@@ -29,6 +29,7 @@ function Species() {
         : results &&
           list.map((item) => (
             <>
+              {item[8][1] === null ? (item[8][1] = []) : item[8][1]}
               <Panel
                 image={item[14][1]}
                 list={[
@@ -40,10 +41,9 @@ function Species() {
                   item[5],
                   item[6],
                   item[7],
-                  item[8],
                   item[9],
                 ]}
-                imageList={[item[10], item[11]]}
+                imageList={[item[8], item[10], item[11]]}
               />
             </>
           ))}
