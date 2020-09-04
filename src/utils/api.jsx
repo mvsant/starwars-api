@@ -23,3 +23,9 @@ export async function nestByPage(setData, parameter, page) {
     .then((response) => response.json())
     .then((data) => setData(data));
 }
+
+export async function nestByCategory(setData, parameter, page) {
+  await fetch(`${baseUrl}${parameter}/${page}`)
+    .then((response) => response.json())
+    .then((data) => setData(data));
+}

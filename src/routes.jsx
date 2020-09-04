@@ -9,20 +9,30 @@ import Films from "./containers/films";
 import Vehicles from "./containers/vehicles";
 import Species from "./containers/species";
 import Starships from "./containers/starships";
-import Id from "./containers/people/id";
+import PeopleId from "./containers/people/people-id";
+import StarshipsId from "./containers/starships/starships-id";
+import VehiclesId from "./containers/vehicles/vehicles-id";
+import SpeciesId from "./containers/species/species-id";
+import PlanetsId from "./containers/planets/planets-id";
+import FilmsId from "./containers/films/films-id";
 
 export default function Routes() {
   return (
     <Router>
       <Navbar />
       <Switch>
-        <Route path="/films" component={Films} />
-        <Route path="/species" component={Species} />
-        <Route path="/vehicles" component={Vehicles} />
-        <Route path="/starships" component={Starships} />
+        <Route exact path="/films" component={Films} />
+        <Route path="/films/:id" component={FilmsId} />
+        <Route exact path="/species" component={Species} />
+        <Route path="/species/:id" component={SpeciesId} />
+        <Route exact path="/vehicles" component={Vehicles} />
+        <Route path="/vehicles/:id" component={VehiclesId} />
+        <Route exact path="/starships" component={Starships} />
+        <Route path="/starships/:id" component={StarshipsId} />
         <Route exact path="/people" component={People} />
-        <Route path="/people/:id" component={Id} />
-        <Route path="/planets" component={Planets} />
+        <Route path="/people/:id" component={PeopleId} />
+        <Route exact path="/planets" component={Planets} />
+        <Route path="/planets/:id" component={PlanetsId} />
         <Route exact path="/" component={Home} />
         <Route component={page404} />
       </Switch>

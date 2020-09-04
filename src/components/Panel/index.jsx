@@ -18,20 +18,18 @@ function Panel(props) {
         <img className="image" src={imagesReferences(image)} alt="" />
       </Link>
       <ul className="list">
-        {list.map((item) => (
-          <>
-            <li>
-              {mask(item[0])}: {item[1]}
-            </li>
-          </>
+        {list.map((item, index) => (
+          <li key={index}>
+            {mask(item[0])}: {item[1]}
+          </li>
         ))}
       </ul>
       <div className="image-list">
-        {imageList.map((item) =>
+        {imageList.map((item, index) =>
           typeof item[1] === "string" ? (
-            <List title={item[0]} list={[item[1]]} />
+            <List key={index} title={item[0]} list={[item[1]]} />
           ) : (
-            <List title={item[0]} list={item[1]} />
+            <List key={index} title={item[0]} list={item[1]} />
           )
         )}
       </div>

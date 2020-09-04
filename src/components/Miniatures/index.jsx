@@ -8,12 +8,18 @@ function Miniatures(props) {
   const [data, setData] = React.useState("");
 
   React.useEffect(() => {
+    const myAbortController = new AbortController();
     indexFullPath(setData, link);
+    return myAbortController.abort();
   }, [link]);
 
   //  new RegExp('\\b' + myWord + '\\b')
 
-  return (
+  return data === undefined ? (
+    <div className="panel">
+      <div className="list">"Loading"</div>
+    </div>
+  ) : (
     <>
       <img
         className="avatar"

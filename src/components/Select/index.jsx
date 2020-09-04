@@ -1,8 +1,7 @@
 import React from "react";
 
 function Select(props) {
-  let { counter } = props;
-  let { onChange } = props;
+  let { counter, onChange } = props;
   let list = [];
 
   for (let i = 0; i < counter / 10; i++) {
