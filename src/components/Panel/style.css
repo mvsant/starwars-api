@@ -60,7 +60,7 @@
   justify-content: space-around;
 }
 
-.list ul li {
+.list ul a {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -68,8 +68,10 @@
   align-items: center;
   padding: 0.1rem;
   margin: 0 1rem;
+  text-decoration: none;
+  color: black;
 }
 
-.list ul li > * {
+.list ul a > * {
   margin: 0.4rem;
 }
