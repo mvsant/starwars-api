@@ -21,9 +21,9 @@ nav ul li a {
 }
 
 header a {
-  color: yellow;
+  color: var(--primary-color);
 }
 
 header a:visited {
-  color: gold;
+  color: var(--primary-color-dark);
 }

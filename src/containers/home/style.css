@@ -16,9 +16,9 @@
 .home-list a {
   margin: 1rem 2rem;
   text-decoration: none;
-  color: #13d3ed;
+  color: var(--secondary-color);
 }
 
 .home-list a:visited {
-  color: #0b94a7;
+  color: var(--secondary-color-dark);
 }

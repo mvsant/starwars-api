@@ -5,6 +5,15 @@ body {
   font-size: 1.2rem;
 }
 
+:root {
+  --primary-color: yellow;
+  --primary-color-dark: gold;
+  --secondary-color: #13d3ed;
+  --secondary-color-dark: #0b94a7;
+  --transparency-dark: rgba(0, 0, 0, 0.6);
+  --transparency-light: rgba(255, 255, 255, 0.6);
+}
+
 h1 {
   font-size: 3rem;
 }
@@ -22,9 +31,4 @@ h3 {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-}
-.list-container select {
-}
-.font {
-  color: white;
 }
