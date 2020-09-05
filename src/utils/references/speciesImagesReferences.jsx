@@ -1,118 +1,154 @@
 import notFound from "../../assets/img.png";
+import img1 from "../../assets/images/species_images/HumansInTheResistance-TROS.jpg";
+import img2 from "../../assets/images/species_images/Droid_Trio_TLJ_alt.png";
+import img3 from "../../assets/images/species_images/Chewbacca-Fathead.png";
+import img4 from "../../assets/images/species_images/Rodian_DICE.png";
+import img5 from "../../assets/images/species_images/JabbaPromo.png";
+import img6 from "../../assets/images/species_images/MP-YodaSpecies.png";
+import img7 from "../../assets/images/species_images/Bossk_full_body.png";
+import img8 from "../../assets/images/species_images/The_Mon_Calamari.png";
+import img9 from "../../assets/images/species_images/Ewoks_Encyclopedia.png";
+import img10 from "../../assets/images/species_images/Sullustan_NEGAS.jpg";
+import img11 from "../../assets/images/species_images/Neimoidian_NEGAS.jpg";
+import img12 from "../../assets/images/species_images/Gungan_warrior.png";
+import img13 from "../../assets/images/species_images/Wattoep2promotionalfull.jpg";
+import img14 from "../../assets/images/species_images/Dug_full_body.png";
+import img15 from "../../assets/images/species_images/Twileks.png";
+import img16 from "../../assets/images/species_images/Databank_aleena.png";
+import img17 from "../../assets/images/species_images/Dud_Bolt_Podracer_Cockpit.png";
+import img18 from "../../assets/images/species_images/Gasgano.jpg";
+import img19 from "../../assets/images/species_images/BenQuadinarosFull-SWE.png";
+import img20 from "../../assets/images/species_images/Mundi_bodyshot.png";
+import img21 from "../../assets/images/species_images/Kitfisto_detail.png";
+import img22 from "../../assets/images/species_images/ZabrakNEGAS.jpg";
+import img23 from "../../assets/images/species_images/Tholothian-UP.png";
+import img24 from "../../assets/images/species_images/Iktotchi_NEGAS.jpg";
+import img25 from "../../assets/images/species_images/Yarael_Poof_USW.png";
+import img26 from "../../assets/images/species_images/Plokoon_detail.png";
+import img27 from "../../assets/images/species_images/Mas_Amedda_SWE.png";
+import img28 from "../../assets/images/species_images/Geonosian_NEGAS.png";
+import img29 from "../../assets/images/species_images/Mirialan_Diplomat.png";
+import img30 from "../../assets/images/species_images/Clawdite_Shapeshifter_AoN.png";
+import img31 from "../../assets/images/species_images/Dexter_Jettster_%28Besalisk%29_FF44.jpg";
+import img32 from "../../assets/images/species_images/Kaminoan_FO_Arden_Beckwith.png";
+import img33 from "../../assets/images/species_images/Wat_Tambor_SWE.png";
+import img34 from "../../assets/images/species_images/N_Card.jpg";
+import img35 from "../../assets/images/species_images/ShaakTi-TCWs3BR1.png";
+import img36 from "../../assets/images/species_images/Kaleesh-Alien_Archive.jpg";
+import img37 from "../../assets/images/species_images/Pau%27an.jpg";
 
 // A pretty ugly hardcoded image seeker
 export default function speciesImagesReferences(url) {
   switch (url) {
     case "https://swapi.dev/api/species/1/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/3/3f/HumansInTheResistance-TROS.jpg/revision/latest/scale-to-width-down/500?cb=20200305153027";
+      return img1;
 
     case "https://swapi.dev/api/species/2/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/f/fb/Droid_Trio_TLJ_alt.png/revision/latest/scale-to-width-down/250?cb=20200223214952";
+      return img2;
 
     case "https://swapi.dev/api/species/3/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/1/1e/Chewbacca-Fathead.png/revision/latest/scale-to-width-down/500?cb=20161108052810";
+      return img3;
 
     case "https://swapi.dev/api/species/4/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/d/d3/Rodian_DICE.png/revision/latest/scale-to-width-down/241?cb=20151106032702";
+      return img4;
 
     case "https://swapi.dev/api/species/5/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/1/19/JabbaPromo.png/revision/latest/scale-to-width-down/500?cb=20161110010925";
+      return img5;
 
     case "https://swapi.dev/api/species/6/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/d/d5/MP-YodaSpecies.png/revision/latest/scale-to-width-down/500?cb=20140412000157";
+      return img6;
 
     case "https://swapi.dev/api/species/7/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/7/72/Bossk_full_body.png/revision/latest/scale-to-width-down/269?cb=20160415124424";
+      return img7;
 
     case "https://swapi.dev/api/species/8/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/2/23/The_Mon_Calamari.png/revision/latest/scale-to-width-down/349?cb=20150801202537";
+      return img8;
 
     case "https://swapi.dev/api/species/9/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/a/a8/Ewoks_Encyclopedia.png/revision/latest/scale-to-width-down/350?cb=20160910212258";
+      return img9;
 
     case "https://swapi.dev/api/species/10/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/f/f5/Sullustan_NEGAS.jpg/revision/latest/scale-to-width-down/499?cb=20100810063353";
+      return img10;
 
     case "https://swapi.dev/api/species/11/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/5/52/Neimoidian_NEGAS.jpg/revision/latest/scale-to-width-down/295?cb=20061021200803";
+      return img11;
 
     case "https://swapi.dev/api/species/12/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/d/d5/Gungan_warrior.png/revision/latest/scale-to-width-down/500?cb=20160911012903";
+      return img12;
 
     case "https://swapi.dev/api/species/13/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/6/6e/Wattoep2promotionalfull.jpg/revision/latest/scale-to-width-down/499?cb=20081222024850";
+      return img13;
 
     case "https://swapi.dev/api/species/14/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/2/2c/Dug_full_body.png/revision/latest/scale-to-width-down/350?cb=20140728150031";
+      return img14;
 
     case "https://swapi.dev/api/species/15/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/5/54/Twileks.png/revision/latest/scale-to-width-down/289?cb=20151229035344";
+      return img15;
 
     case "https://swapi.dev/api/species/16/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/a/a4/Databank_aleena.png/revision/latest/scale-to-width-down/500?cb=20160912123529";
+      return img16;
 
     case "https://swapi.dev/api/species/17/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/7/73/Dud_Bolt_Podracer_Cockpit.png/revision/latest/scale-to-width-down/500?cb=20141214155313";
+      return img17;
 
     case "https://swapi.dev/api/species/18/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/3/30/Gasgano.jpg/revision/latest/scale-to-width-down/241?cb=20150331133737";
+      return img18;
 
     case "https://swapi.dev/api/species/19/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/1/18/BenQuadinarosFull-SWE.png/revision/latest/scale-to-width-down/249?cb=20160910192602";
+      return img19;
 
     case "https://swapi.dev/api/species/20/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/b/be/Mundi_bodyshot.png/revision/latest/scale-to-width-down/203?cb=20140603153008";
+      return img20;
 
     case "https://swapi.dev/api/species/21/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/8/81/Kitfisto_detail.png/revision/latest/scale-to-width-down/298?cb=20170608230157";
+      return img21;
 
     case "https://swapi.dev/api/species/22/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/e/ee/ZabrakNEGAS.jpg/revision/latest/scale-to-width-down/500?cb=20070416170907";
+      return img22;
 
     case "https://swapi.dev/api/species/23/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/6/66/Tholothian-UP.png/revision/latest/scale-to-width-down/236?cb=20190415010812";
+      return img23;
 
     case "https://swapi.dev/api/species/24/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/f/f0/Iktotchi_NEGAS.jpg/revision/latest/scale-to-width-down/500?cb=20061202133616";
+      return img24;
 
     case "https://swapi.dev/api/species/25/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/4/4f/Yarael_Poof_USW.png/revision/latest/scale-to-width-down/500?cb=20160701061715";
+      return img25;
 
     case "https://swapi.dev/api/species/26/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/f/fd/Plokoon_detail.png/revision/latest/scale-to-width-down/273?cb=20111116042533";
-
+      return img26;
     case "https://swapi.dev/api/species/27/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/c/c3/Mas_Amedda_SWE.png/revision/latest/scale-to-width-down/500?cb=20140529044319";
+      return img27;
 
     case "https://swapi.dev/api/species/28/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/a/a0/Geonosian_NEGAS.png/revision/latest/scale-to-width-down/500?cb=20170226060952";
+      return img28;
 
     case "https://swapi.dev/api/species/29/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/b/b7/Mirialan_Diplomat.png/revision/latest/scale-to-width-down/499?cb=20160207064156";
+      return img29;
 
     case "https://swapi.dev/api/species/30/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/d/db/Clawdite_Shapeshifter_AoN.png/revision/latest/scale-to-width-down/500?cb=20190428225058";
+      return img30;
 
     case "https://swapi.dev/api/species/31/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/8/83/Dexter_Jettster_%28Besalisk%29_FF44.jpg/revision/latest/scale-to-width-down/500?cb=20070712205318";
+      return img31;
 
     case "https://swapi.dev/api/species/32/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/4/40/Kaminoan_FO_Arden_Beckwith.png/revision/latest/scale-to-width-down/500?cb=20180316124841";
+      return img32;
 
     case "https://swapi.dev/api/species/33/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/d/d2/Wat_Tambor_SWE.png/revision/latest/scale-to-width-down/285?cb=20160930025610";
+      return img33;
 
     case "https://swapi.dev/api/species/34/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/2/23/N_Card.jpg/revision/latest/scale-to-width-down/499?cb=20170524141921";
+      return img34;
 
     case "https://swapi.dev/api/species/35/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/a/af/ShaakTi-TCWs3BR1.png/revision/latest/scale-to-width-down/222?cb=20200314025327";
+      return img35;
 
     case "https://swapi.dev/api/species/36/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/d/d0/Kaleesh-Alien_Archive.jpg/revision/latest/scale-to-width-down/500?cb=20181011072919";
+      return img36;
 
     case "https://swapi.dev/api/species/37/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/2/22/Pau%27an.jpg/revision/latest/scale-to-width-down/499?cb=20070705042952";
+      return img37;
 
     default:
       return notFound;

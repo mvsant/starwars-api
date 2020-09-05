@@ -1,256 +1,339 @@
 import notFound from "../../assets/img.png";
+import img1 from "../../assets/images/people_images/Luke_on_Endor.jpg";
+import img2 from "../../assets/images/people_images/C-3PO_TLJ_Card_Trader_Award_Card.png";
+import img3 from "../../assets/images/people_images/ArtooTFA2-Fathead.png";
+import img4 from "../../assets/images/people_images/DarthVader-CotF.jpg";
+import img5 from "../../assets/images/people_images/Sw4-Leia2.png";
+import img6 from "../../assets/images/people_images/OwenLarsHS-SWE.jpg";
+import img7 from "../../assets/images/people_images/Beru_headshot2.jpg";
+import img8 from "../../assets/images/people_images/R5d4.jpg";
+import img9 from "../../assets/images/people_images/BiggsHS-ANH.png";
+import img10 from "../../assets/images/people_images/Obi-Wan_The_Moment_of_Truth.jpg";
+import img11 from "../../assets/images/people_images/Anakin_Skywalker_RotS.png";
+import img12 from "../../assets/images/people_images/Tarkininfobox.jpg";
+import img13 from "../../assets/images/people_images/Chewbacca_TLJ.png";
+import img14 from "../../assets/images/people_images/TFAHanSolo.png";
+import img15 from "../../assets/images/people_images/Greedo.jpg";
+import img16 from "../../assets/images/people_images/Jabba_SWSB.png";
+
+import img18 from "../../assets/images/people_images/Wedge_TROS.jpg";
+import img19 from "../../assets/images/people_images/JekPorkins-DB.png";
+import img20 from "../../assets/images/people_images/Yoda_SWSB.png";
+import img21 from "../../assets/images/people_images/Emperor_Sidious.png";
+import img22 from "../../assets/images/people_images/Boba_Fett_HS_Fathead.png";
+import img23 from "../../assets/images/people_images/IG-assassin_negtd.jpg";
+import img24 from "../../assets/images/people_images/Bossk.png";
+import img25 from "../../assets/images/people_images/LandoCalrissian-TROSOCE.png";
+import img26 from "../../assets/images/people_images/SWE_Lobot.jpg";
+import img27 from "../../assets/images/people_images/Admiral_Ackbar_RH.png";
+import img28 from "../../assets/images/people_images/MP-MonMothma.png";
+import img29 from "../../assets/images/people_images/Arvel-crynyd.jpg";
+import img30 from "../../assets/images/people_images/Wicket_RotJ.png";
+import img31 from "../../assets/images/people_images/Old_nien_nunb_-_profile.png";
+import img32 from "../../assets/images/people_images/Qui-Gon_Jinn_SWFB.png";
+import img33 from "../../assets/images/people_images/Nute_Gunray_SWE.png";
+import img34 from "../../assets/images/people_images/ValorumPortrait-SWE.png";
+import img35 from "../../assets/images/people_images/Padmegreenscrshot.jpg";
+import img36 from "../../assets/images/people_images/Jar_Jar_aotc.jpg";
+import img37 from "../../assets/images/people_images/TarpalsHS.jpg";
+import img38 from "../../assets/images/people_images/Bossnass.jpg";
+import img39 from "../../assets/images/people_images/RicOlieHS-SWE.png";
+import img40 from "../../assets/images/people_images/WattoHS.jpg";
+import img41 from "../../assets/images/people_images/Sebulba_Headshot_Closeup.png";
+import img42 from "../../assets/images/people_images/PanakaHS-TPM.png";
+import img43 from "../../assets/images/people_images/ShmiSkywalkerDatabank.jpg";
+import img44 from "../../assets/images/people_images/MaulHS_SWI185.png";
+import img45 from "../../assets/images/people_images/BibFortunaHS-ROTJ.png";
+import img46 from "../../assets/images/people_images/Aayla.jpg";
+import img47 from "../../assets/images/people_images/RattsHS.jpg";
+import img48 from "../../assets/images/people_images/Dud_Bolt_Podracer_Cockpit.png";
+import img49 from "../../assets/images/people_images/GasganoHS-SWE.jpg";
+import img50 from "../../assets/images/people_images/BenQuadinarosHS-SWE.png";
+import img51 from "../../assets/images/people_images/Mace_Windu_SWI38.png";
+import img52 from "../../assets/images/people_images/KiAdiMundi.jpg";
+import img53 from "../../assets/images/people_images/KitFisto-SithSnapshot.jpg";
+import img54 from "../../assets/images/people_images/Eeth_Koth_profile.png";
+import img55 from "../../assets/images/people_images/AdiGallia.jpg";
+import img56 from "../../assets/images/people_images/Iktotchi_AA.JPG.jpg";
+import img57 from "../../assets/images/people_images/YaraelPoof-SWCT.png";
+import img58 from "../../assets/images/people_images/Plo_Koon_TPM.png";
+import img59 from "../../assets/images/people_images/Mas_Amedda_SWCT.png";
+import img60 from "../../assets/images/people_images/Gregar_Typho.jpg";
+import img61 from "../../assets/images/people_images/Cord_.jpg";
+import img62 from "../../assets/images/people_images/ClieggLarsHS-SWE.jpg";
+import img63 from "../../assets/images/people_images/Poggle_the_lesser_-_sw_card_trader.png";
+import img64 from "../../assets/images/people_images/LuminaraHS-SWE.png";
+import img65 from "../../assets/images/people_images/Barrisprofile2.jpg";
+import img66 from "../../assets/images/people_images/Dorme-SWCT.png";
+import img67 from "../../assets/images/people_images/Dooku_Headshot.jpg";
+import img68 from "../../assets/images/people_images/Bailrogueone.jpg";
+import img69 from "../../assets/images/people_images/Jango_OP.jpg";
+import img70 from "../../assets/images/people_images/ZamWesell.jpg";
+import img71 from "../../assets/images/people_images/DexterHS-SWE.jpg";
+import img72 from "../../assets/images/people_images/Lama_Su.jpg";
+import img73 from "../../assets/images/people_images/TaunWe.jpg";
+import img74 from "../../assets/images/people_images/Jocasta_Nu.jpg";
+import img75 from "../../assets/images/people_images/R4-P17.jpg";
+import img76 from "../../assets/images/people_images/TamborBoomHeadshot.jpg";
+import img77 from "../../assets/images/people_images/SanHillHS-AOTC.png";
+import img78 from "../../assets/images/people_images/Shaak_Ti_Big_Headshot.jpg";
+import img79 from "../../assets/images/people_images/Grievoushead.jpg";
+import img80 from "../../assets/images/people_images/Tarfful_RotS.png";
+import img81 from "../../assets/images/people_images/Antilles-SWE.png";
+import img82 from "../../assets/images/people_images/SlyMooreIsWatchingYouPoop-OfficialPix.jpg";
+import img83 from "../../assets/images/people_images/Tion_Medon.jpg";
 
 // A pretty ugly hardcoded image seeker
 export default function peopleImagesReferences(url) {
   switch (url) {
     case "https://swapi.dev/api/people/1/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/c/c1/Luke_on_Endor.jpg";
+      return img1;
 
     case "https://swapi.dev/api/people/2/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/3/3f/C-3PO_TLJ_Card_Trader_Award_Card.png";
+      return img2;
 
     case "https://swapi.dev/api/people/3/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/e/eb/ArtooTFA2-Fathead.png";
+      return img3;
 
     case "https://swapi.dev/api/people/4/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/b/b0/DarthVader-CotF.jpg";
+      return img4;
 
     case "https://swapi.dev/api/people/5/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/8/83/Sw4-Leia2.png";
+      return img5;
 
     case "https://swapi.dev/api/people/6/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/9/91/OwenLarsHS-SWE.jpg";
+      return img6;
 
     case "https://swapi.dev/api/people/7/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/7/76/Beru_headshot2.jpg";
+      return img7;
 
     case "https://swapi.dev/api/people/8/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/2/2c/R5d4.jpg";
+      return img8;
 
     case "https://swapi.dev/api/people/9/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/0/00/BiggsHS-ANH.png";
+      return img9;
 
     case "https://swapi.dev/api/people/10/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/3/36/Obi-Wan_The_Moment_of_Truth.jpg";
+      return img10;
 
     case "https://swapi.dev/api/people/11/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/6/6f/Anakin_Skywalker_RotS.png";
+      return img11;
 
     case "https://swapi.dev/api/people/12/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/c/c1/Tarkininfobox.jpg";
+      return img12;
 
     case "https://swapi.dev/api/people/13/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/4/48/Chewbacca_TLJ.png";
+      return img13;
 
     case "https://swapi.dev/api/people/14/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/e/e2/TFAHanSolo.png";
+      return img14;
 
     case "https://swapi.dev/api/people/15/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/c/c6/Greedo.jpg";
+      return img15;
 
     case "https://swapi.dev/api/people/16/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/7/7f/Jabba_SWSB.png";
+      return img16;
 
     case "https://swapi.dev/api/people/17/":
       return notFound;
 
     case "https://swapi.dev/api/people/18/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/8/82/Wedge_TROS.jpg";
+      return img18;
 
     case "https://swapi.dev/api/people/19/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/e/eb/JekPorkins-DB.png";
+      return img19;
 
     case "https://swapi.dev/api/people/20/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/d/d6/Yoda_SWSB.png";
+      return img20;
 
     case "https://swapi.dev/api/people/21/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/d/d8/Emperor_Sidious.png";
+      return img21;
 
     case "https://swapi.dev/api/people/22/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/7/79/Boba_Fett_HS_Fathead.png";
+      return img22;
 
     case "https://swapi.dev/api/people/23/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/c/c1/IG-assassin_negtd.jpg";
+      return img23;
 
     case "https://swapi.dev/api/people/24/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/1/1d/Bossk.png";
+      return img24;
 
     case "https://swapi.dev/api/people/25/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/2/29/LandoCalrissian-TROSOCE.png";
+      return img25;
 
     case "https://swapi.dev/api/people/26/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/9/96/SWE_Lobot.jpg";
+      return img26;
 
     case "https://swapi.dev/api/people/27/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/2/29/Admiral_Ackbar_RH.png";
+      return img27;
 
     case "https://swapi.dev/api/people/28/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/b/b7/MP-MonMothma.png";
+      return img28;
 
     case "https://swapi.dev/api/people/29/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/d/de/Arvel-crynyd.jpg";
+      return img29;
 
     case "https://swapi.dev/api/people/30/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/4/4f/Wicket_RotJ.png";
+      return img30;
 
     case "https://swapi.dev/api/people/31/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/1/14/Old_nien_nunb_-_profile.png";
+      return img31;
 
     case "https://swapi.dev/api/people/32/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/6/66/Qui-Gon_Jinn_SWFB.png";
+      return img32;
 
     case "https://swapi.dev/api/people/33/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/f/fd/Nute_Gunray_SWE.png";
+      return img33;
 
     case "https://swapi.dev/api/people/34/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/5/51/ValorumPortrait-SWE.png";
+      return img34;
 
     case "https://swapi.dev/api/people/35/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/b/b2/Padmegreenscrshot.jpg";
+      return img35;
 
     case "https://swapi.dev/api/people/36/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/d/d2/Jar_Jar_aotc.jpg";
+      return img36;
 
     case "https://swapi.dev/api/people/37/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/c/ca/TarpalsHS.jpg";
+      return img37;
 
     case "https://swapi.dev/api/people/38/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/d/d8/Bossnass.jpg";
+      return img38;
 
     case "https://swapi.dev/api/people/39/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/4/4c/RicOlieHS-SWE.png";
+      return img39;
 
     case "https://swapi.dev/api/people/40/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/e/eb/WattoHS.jpg";
+      return img40;
 
     case "https://swapi.dev/api/people/41/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/1/14/Sebulba_Headshot_Closeup.png";
+      return img41;
 
     case "https://swapi.dev/api/people/42/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/7/72/PanakaHS-TPM.png";
+      return img42;
 
     case "https://swapi.dev/api/people/43/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/a/ad/ShmiSkywalkerDatabank_%28Repurposed%29.jpeg";
+      return img43;
 
     case "https://swapi.dev/api/people/44/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/8/89/MaulHS_SWI185.png";
+      return img44;
 
     case "https://swapi.dev/api/people/45/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/3/33/BibFortunaHS-ROTJ.png";
+      return img45;
 
     case "https://swapi.dev/api/people/46/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/f/f9/Aayla.jpg";
+      return img46;
 
     case "https://swapi.dev/api/people/47/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/6/68/RattsHS.jpg";
+      return img47;
 
     case "https://swapi.dev/api/people/48/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/7/73/Dud_Bolt_Podracer_Cockpit.png";
+      return img48;
 
     case "https://swapi.dev/api/people/49/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/5/57/GasganoHS-SWE.jpg";
+      return img49;
 
     case "https://swapi.dev/api/people/50/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/0/02/BenQuadinarosHS-SWE.png";
+      return img50;
 
     case "https://swapi.dev/api/people/51/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/4/41/Mace_Windu_SWI38.png";
+      return img51;
 
     case "https://swapi.dev/api/people/52/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/9/9e/KiAdiMundi.jpg";
+      return img52;
 
     case "https://swapi.dev/api/people/53/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/1/17/KitFisto-SithSnapshot.jpg";
+      return img53;
 
     case "https://swapi.dev/api/people/54/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/b/b6/Eeth_Koth_profile.png";
+      return img54;
 
     case "https://swapi.dev/api/people/55/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/b/ba/AdiGallia.jpg";
+      return img55;
 
     case "https://swapi.dev/api/people/56/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/c/ca/Iktotchi_AA.JPG";
+      return img56;
 
     case "https://swapi.dev/api/people/57/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/b/b2/YaraelPoof-SWCT.png";
+      return img57;
 
     case "https://swapi.dev/api/people/58/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/c/c4/Plo_Koon_TPM.png";
+      return img58;
 
     case "https://swapi.dev/api/people/59/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/3/37/Mas_Amedda_SWCT.png";
+      return img59;
 
     case "https://swapi.dev/api/people/60/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/5/52/Gregar_Typho.jpg";
+      return img60;
 
     case "https://swapi.dev/api/people/61/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/d/de/Cord%C3%A9.jpg";
+      return img61;
 
     case "https://swapi.dev/api/people/62/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/3/36/ClieggLarsHS-SWE.jpg";
+      return img62;
 
     case "https://swapi.dev/api/people/63/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/9/93/Poggle_the_lesser_-_sw_card_trader.png";
+      return img63;
 
     case "https://swapi.dev/api/people/64/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/2/21/LuminaraHS-SWE_%28new%29.png";
+      return img64;
 
     case "https://swapi.dev/api/people/65/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/3/37/Barrisprofile2.jpg";
+      return img65;
 
     case "https://swapi.dev/api/people/66/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/8/8a/Dorme-SWCT.png";
+      return img66;
 
     case "https://swapi.dev/api/people/67/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/b/b8/Dooku_Headshot.jpg";
+      return img67;
 
     case "https://swapi.dev/api/people/68/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/5/50/Bailrogueone.jpeg";
+      return img68;
 
     case "https://swapi.dev/api/people/69/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/7/70/Jango_OP.jpg";
+      return img69;
 
     case "https://swapi.dev/api/people/70/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/d/d1/ZamWesell.jpg";
+      return img70;
 
     case "https://swapi.dev/api/people/71/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/6/6c/DexterHS-SWE.jpg";
+      return img71;
 
     case "https://swapi.dev/api/people/72/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/7/73/Lama_Su.jpg";
+      return img72;
 
     case "https://swapi.dev/api/people/73/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/9/9c/TaunWe.jpg";
+      return img73;
 
     case "https://swapi.dev/api/people/74/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/4/44/Jocasta_Nu.jpg";
+      return img74;
 
     case "https://swapi.dev/api/people/75/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/6/6b/R4-P17.jpg";
+      return img75;
 
     case "https://swapi.dev/api/people/76/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/e/e8/TamborBoomHeadshot.jpg";
+      return img76;
 
     case "https://swapi.dev/api/people/77/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/8/8b/SanHillHS-AOTC.png";
+      return img77;
 
     case "https://swapi.dev/api/people/78/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/4/44/Shaak_Ti_Big_Headshot.jpg";
+      return img78;
 
     case "https://swapi.dev/api/people/79/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/d/de/Grievoushead.jpg";
+      return img79;
 
     case "https://swapi.dev/api/people/80/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/3/37/Tarfful_RotS.png";
+      return img80;
 
     case "https://swapi.dev/api/people/81/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/d/d7/Antilles-SWE.png";
+      return img81;
 
     case "https://swapi.dev/api/people/82/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/e/ec/SlyMooreIsWatchingYouPoop-OfficialPix.jpg";
+      return img82;
 
     case "https://swapi.dev/api/people/83/":
-      return "https://vignette.wikia.nocookie.net/starwars/images/4/43/Tion_Medon.jpg";
+      return img83;
 
     default:
       return notFound;
