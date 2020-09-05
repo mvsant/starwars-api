@@ -15,12 +15,15 @@ function Navbar() {
       >
         {toggle ? "X" : " \u2630 "}
       </button>
-      <img className="topTitle" src={logo} alt="StarWars api" />
+      <Link to="/">
+        <img
+          className="topTitle"
+          src={logo}
+          alt="StarWars logo, link to home"
+        />
+      </Link>
       <nav>
         <ul className={toggle ? "show-nav" : "hide-nav"}>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
           <li>
             <Link to="/people">People</Link>
           </li>

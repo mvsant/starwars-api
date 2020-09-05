@@ -1,6 +1,6 @@
 .topTitle {
-  width: 50%;
-  height: 50%;
+  width: 60%;
+  height: 60%;
   transform: perspective(200px) rotateX(40deg);
 }
 
