@@ -1,24 +1,17 @@
 import React from "react";
 import Panel from "../../../components/Panel";
-import { nestByCategory } from "../../../utils/api";
+import { nestByOne } from "../../../utils/api";
+import { references } from "../../../utils/references/references";
 
 function FilmsId(props) {
   const [data, setData] = React.useState([]);
   const list = [];
-  const id = props.match.params.id;
-  const origin = props.location.category;
+  const path = props.location.pathname.substring(1);
 
   React.useEffect(() => {
-    nestByCategory(setData, origin, id);
-  }, [origin, id]);
+    nestByOne(setData, path);
+  }, [path]);
   Object.entries(data).map((item) => list.push(item));
-
-  function getId(item) {
-    return item
-      .substring(0, item.length - 1)
-      .split("/")
-      .pop(-1);
-  }
 
   return list[0] === undefined ? (
     <div className="panel">
@@ -30,7 +23,7 @@ function FilmsId(props) {
       list={[list[0], list[1], list[2], list[3], list[4], list[5]]}
       imageList={[list[6], list[7], list[8], list[9], list[10]]}
       origin="films"
-      id={getId(list[13][1])}
+      id={references(list[13][1]).id}
     />
   );
 }

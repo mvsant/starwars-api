@@ -2,29 +2,24 @@ import React from "react";
 import { nestByPage } from "../../utils/api";
 import Select from "../../components/Select";
 import Panel from "../../components/Panel";
+import { references } from "../../utils/references/references";
 
-function Vehicles() {
+function Vehicles(props) {
   const [data, setData] = React.useState([]);
   const [page, setPage] = React.useState(1);
+  const path = props.location.pathname.substring(1);
   const [loading, setLoading] = React.useState(false);
   const results = data.results;
   const list = [];
 
   React.useEffect(() => {
     setLoading(true);
-    nestByPage(setData, "vehicles", page);
+    nestByPage(setData, path, page);
     return setLoading(false);
-  }, [page]);
+  }, [path, page]);
 
   for (const item in results) {
     list.push(Object.entries(results[item]));
-  }
-
-  function getId(item) {
-    return item
-      .substring(0, item.length - 1)
-      .split("/")
-      .pop(-1);
   }
 
   return list[0] === undefined || loading === true ? (
@@ -34,8 +29,9 @@ function Vehicles() {
   ) : (
     <div className="list-container">
       <Select counter={data.count} onChange={(e) => setPage(e.target.value)} />
-      {list.map((item) => (
+      {list.map((item, index) => (
         <Panel
+          key={index}
           image={item[15][1]}
           list={[
             item[0],
@@ -51,8 +47,8 @@ function Vehicles() {
             item[10],
           ]}
           imageList={[item[11], item[12]]}
-          origin="vehicles"
-          id={getId(item[15][1])}
+          origin={path}
+          id={references(item[15][1]).id}
         />
       ))}
     </div>

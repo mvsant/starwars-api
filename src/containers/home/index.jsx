@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { urlMask, namesMask } from "../../utils/helpers/masks";
 import Card from "../../components/Card";
 import "./style.css";
-import { imagesReferences } from "../../utils/references/imagesReferences";
+import { references } from "../../utils/references/references";
 
 function Home() {
   let [data, setData] = React.useState(""); // state hook
@@ -26,7 +26,7 @@ function Home() {
           <Link key={index} to={urlMask(item[1])}>
             <Card
               title={namesMask(item[0])}
-              img={imagesReferences(baseUrl + item[0] + "/4/")}
+              img={references(baseUrl + item[0] + "/4/").img}
             ></Card>
           </Link>
         ))}

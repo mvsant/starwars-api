@@ -37,119 +37,119 @@ import img74 from "../../assets/images/starships_images/Soulless_One_TCW.jpg";
 import img75 from "../../assets/images/starships_images/Nimbus-class_V-wing_TFOWM.png";
 
 // A pretty ugly hardcoded image seeker
-export default function starshipsImagesReferences(url) {
+export default function starshipsReferences(url) {
   switch (url) {
     //Image to homepage
     case "https://swapi.dev/api/starships/4/":
-      return img5;
+      return { id: 4, img: img5, name: "Sentinel-class landing craft" };
 
     case "https://swapi.dev/api/starships/2/":
-      return img2;
+      return { id: 2, img: img2, name: "CR90 corvette" };
 
     case "https://swapi.dev/api/starships/3/":
-      return img3;
+      return { id: 3, img: img3, name: "Star Destroyer" };
 
     case "https://swapi.dev/api/starships/5/":
-      return img5;
+      return { id: 5, img: img5, name: "Sentinel-class landing craft" };
 
     case "https://swapi.dev/api/starships/9/":
-      return img9;
+      return { id: 9, img: img9, name: "Death Star" };
 
     case "https://swapi.dev/api/starships/10/":
-      return img10;
+      return { id: 10, img: img10, name: "Millennium Falcon" };
 
     case "https://swapi.dev/api/starships/11/":
-      return img11;
+      return { id: 11, img: img11, name: "Y-wing" };
 
     case "https://swapi.dev/api/starships/12/":
-      return img12;
+      return { id: 12, img: img12, name: "X-wing" };
 
     case "https://swapi.dev/api/starships/13/":
-      return img13;
+      return { id: 13, img: img13, name: "TIE Advanced x1" };
 
     case "https://swapi.dev/api/starships/15/":
-      return img15;
+      return { id: 15, img: img15, name: "Executor" };
 
     case "https://swapi.dev/api/starships/17/":
-      return img17;
+      return { id: 17, img: img17, name: "Rebel transport" };
 
     case "https://swapi.dev/api/starships/21/":
-      return img21;
+      return { id: 21, img: img21, name: "Slave 1" };
 
     case "https://swapi.dev/api/starships/22/":
-      return img22;
+      return { id: 22, img: img22, name: "Imperial shuttle" };
 
     case "https://swapi.dev/api/starships/23/":
-      return img23;
+      return { id: 23, img: img23, name: "EF76 Nebulon-B escort frigate" };
 
     case "https://swapi.dev/api/starships/27/":
-      return img27;
+      return { id: 27, img: img27, name: "Calamari Cruiser" };
 
     case "https://swapi.dev/api/starships/28/":
-      return img28;
+      return { id: 28, img: img28, name: "A-wing" };
 
     case "https://swapi.dev/api/starships/29/":
-      return img29;
+      return { id: 29, img: img29, name: "B-wing" };
 
     case "https://swapi.dev/api/starships/31/":
-      return img31;
+      return { id: 31, img: img31, name: "Republic Cruiser" };
 
     case "https://swapi.dev/api/starships/32/":
-      return img32;
+      return { id: 32, img: img32, name: "Droid control ship" };
 
     case "https://swapi.dev/api/starships/39/":
-      return img39;
+      return { id: 39, img: img39, name: "Naboo fighter" };
 
     case "https://swapi.dev/api/starships/40/":
-      return img40;
+      return { id: 40, img: img40, name: "Naboo Royal Starship" };
 
     case "https://swapi.dev/api/starships/41/":
-      return img41;
+      return { id: 41, img: img41, name: "Scimitar" };
 
     case "https://swapi.dev/api/starships/43/":
-      return img43;
+      return { id: 43, img: img43, name: "J-type diplomatic barge" };
 
     case "https://swapi.dev/api/starships/47/":
-      return img47;
+      return { id: 47, img: img47, name: "AA-9 Coruscant freighter" };
 
     case "https://swapi.dev/api/starships/48/":
-      return img48;
+      return { id: 48, img: img48, name: "Jedi starfighter" };
 
     case "https://swapi.dev/api/starships/49/":
-      return img49;
+      return { id: 49, img: img49, name: "H-type Nubian yacht" };
 
     case "https://swapi.dev/api/starships/52/":
-      return img52;
+      return { id: 52, img: img52, name: "Republic Assault ship" };
 
     case "https://swapi.dev/api/starships/58/":
-      return img58;
+      return { id: 58, img: img58, name: "Solar Sailer" };
 
     case "https://swapi.dev/api/starships/59/":
-      return img59;
+      return { id: 59, img: img59, name: "Trade Federation cruiser" };
 
     case "https://swapi.dev/api/starships/61/":
-      return img61;
+      return { id: 61, img: img61, name: "Theta-class T-2c shuttle" };
 
     case "https://swapi.dev/api/starships/63/":
-      return img63;
+      return { id: 63, img: img63, name: "Republic attack cruiser" };
 
     case "https://swapi.dev/api/starships/64/":
-      return img64;
+      return { id: 64, img: img64, name: "Naboo star skiff" };
 
     case "https://swapi.dev/api/starships/65/":
-      return img65;
+      return { id: 65, img: img65, name: "Jedi Interceptor" };
 
     case "https://swapi.dev/api/starships/66/":
-      return img66;
+      return { id: 66, img: img66, name: "arc-170" };
 
     case "https://swapi.dev/api/starships/68/":
-      return img68;
+      return { id: 68, img: img68, name: "Banking clan frigte" };
 
     case "https://swapi.dev/api/starships/74/":
-      return img74;
+      return { id: 74, img: img74, name: "Belbullab-22 starfighter" };
 
     case "https://swapi.dev/api/starships/75/":
-      return img75;
+      return { id: 75, img: img75, name: "V-wing" };
 
     default:
       return notFound;

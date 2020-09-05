@@ -15,7 +15,6 @@ import img13 from "../../assets/images/people_images/Chewbacca_TLJ.png";
 import img14 from "../../assets/images/people_images/TFAHanSolo.png";
 import img15 from "../../assets/images/people_images/Greedo.jpg";
 import img16 from "../../assets/images/people_images/Jabba_SWSB.png";
-
 import img18 from "../../assets/images/people_images/Wedge_TROS.jpg";
 import img19 from "../../assets/images/people_images/JekPorkins-DB.png";
 import img20 from "../../assets/images/people_images/Yoda_SWSB.png";
@@ -84,256 +83,253 @@ import img82 from "../../assets/images/people_images/SlyMooreIsWatchingYouPoop-O
 import img83 from "../../assets/images/people_images/Tion_Medon.jpg";
 
 // A pretty ugly hardcoded image seeker
-export default function peopleImagesReferences(url) {
+export default function peopleReferences(url) {
   switch (url) {
     case "https://swapi.dev/api/people/1/":
-      return img1;
+      return { id: 1, img: img1, name: "Luke Skywalker" };
 
     case "https://swapi.dev/api/people/2/":
-      return img2;
+      return { id: 2, img: img2, name: "C-3PO" };
 
     case "https://swapi.dev/api/people/3/":
-      return img3;
+      return { id: 3, img: img3, name: "R2-D2" };
 
     case "https://swapi.dev/api/people/4/":
-      return img4;
+      return { id: 4, img: img4, name: "Darth Vader" };
 
     case "https://swapi.dev/api/people/5/":
-      return img5;
+      return { id: 5, img: img5, name: "Leia Organa" };
 
     case "https://swapi.dev/api/people/6/":
-      return img6;
+      return { id: 6, img: img6, name: "Owen Lars" };
 
     case "https://swapi.dev/api/people/7/":
-      return img7;
+      return { id: 7, img: img7, name: "Beru Whitesun lars" };
 
     case "https://swapi.dev/api/people/8/":
-      return img8;
+      return { id: 8, img: img8, name: "R5-D4" };
 
     case "https://swapi.dev/api/people/9/":
-      return img9;
+      return { id: 9, img: img9, name: "Biggs Darklighter" };
 
     case "https://swapi.dev/api/people/10/":
-      return img10;
+      return { id: 10, img: img10, name: "Obi-Wan Kenobi" };
 
     case "https://swapi.dev/api/people/11/":
-      return img11;
+      return { id: 11, img: img11, name: "Anakin Skywalker" };
 
     case "https://swapi.dev/api/people/12/":
-      return img12;
+      return { id: 12, img: img12, name: "Wilhuff Tarkin" };
 
     case "https://swapi.dev/api/people/13/":
-      return img13;
+      return { id: 13, img: img13, name: "Chewbacca" };
 
     case "https://swapi.dev/api/people/14/":
-      return img14;
+      return { id: 14, img: img14, name: "Han Solo" };
 
     case "https://swapi.dev/api/people/15/":
-      return img15;
+      return { id: 15, img: img15, name: "Greedo" };
 
     case "https://swapi.dev/api/people/16/":
-      return img16;
-
-    case "https://swapi.dev/api/people/17/":
-      return notFound;
+      return { id: 16, img: img16, name: "Jabba Desilijic Tiure" };
 
     case "https://swapi.dev/api/people/18/":
-      return img18;
+      return { id: 18, img: img18, name: "Wedge Antilles" };
 
     case "https://swapi.dev/api/people/19/":
-      return img19;
+      return { id: 19, img: img19, name: "Jek Tono Porkins" };
 
     case "https://swapi.dev/api/people/20/":
-      return img20;
+      return { id: 20, img: img20, name: "Yoda" };
 
     case "https://swapi.dev/api/people/21/":
-      return img21;
+      return { id: 21, img: img21, name: "Palpatine" };
 
     case "https://swapi.dev/api/people/22/":
-      return img22;
+      return { id: 22, img: img22, name: "Boba Fett" };
 
     case "https://swapi.dev/api/people/23/":
-      return img23;
+      return { id: 23, img: img23, name: "IG-88" };
 
     case "https://swapi.dev/api/people/24/":
-      return img24;
+      return { id: 24, img: img24, name: "Bossk" };
 
     case "https://swapi.dev/api/people/25/":
-      return img25;
+      return { id: 25, img: img25, name: "Lando Calrissian" };
 
     case "https://swapi.dev/api/people/26/":
-      return img26;
+      return { id: 26, img: img26, name: "Lobot" };
 
     case "https://swapi.dev/api/people/27/":
-      return img27;
+      return { id: 27, img: img27, name: "Ackbar" };
 
     case "https://swapi.dev/api/people/28/":
-      return img28;
+      return { id: 28, img: img28, name: "Mon Mothma" };
 
     case "https://swapi.dev/api/people/29/":
-      return img29;
+      return { id: 29, img: img29, name: "Arvel Crynyd" };
 
     case "https://swapi.dev/api/people/30/":
-      return img30;
+      return { id: 30, img: img30, name: "Wicket Systri Warrick" };
 
     case "https://swapi.dev/api/people/31/":
-      return img31;
+      return { id: 31, img: img31, name: "Nien Nunb" };
 
     case "https://swapi.dev/api/people/32/":
-      return img32;
+      return { id: 32, img: img32, name: "Qui-Gon Jinn" };
 
     case "https://swapi.dev/api/people/33/":
-      return img33;
+      return { id: 33, img: img33, name: "Nute Gunray" };
 
     case "https://swapi.dev/api/people/34/":
-      return img34;
+      return { id: 34, img: img34, name: "Finis Valorum" };
 
     case "https://swapi.dev/api/people/35/":
-      return img35;
+      return { id: 35, img: img35, name: "Padmé Amidala" };
 
     case "https://swapi.dev/api/people/36/":
-      return img36;
+      return { id: 36, img: img36, name: "Jar Jar Binks" };
 
     case "https://swapi.dev/api/people/37/":
-      return img37;
+      return { id: 37, img: img37, name: "Roos Tarpals" };
 
     case "https://swapi.dev/api/people/38/":
-      return img38;
+      return { id: 38, img: img38, name: "Rugor Nass" };
 
     case "https://swapi.dev/api/people/39/":
-      return img39;
+      return { id: 39, img: img39, name: "Ric Olié" };
 
     case "https://swapi.dev/api/people/40/":
-      return img40;
+      return { id: 40, img: img40, name: "Watto" };
 
     case "https://swapi.dev/api/people/41/":
-      return img41;
+      return { id: 41, img: img41, name: "Sebulba" };
 
     case "https://swapi.dev/api/people/42/":
-      return img42;
+      return { id: 42, img: img42, name: "Quarsh Panaka" };
 
     case "https://swapi.dev/api/people/43/":
-      return img43;
+      return { id: 43, img: img43, name: "Shmi Skywalker" };
 
     case "https://swapi.dev/api/people/44/":
-      return img44;
+      return { id: 44, img: img44, name: "Darth Maul" };
 
     case "https://swapi.dev/api/people/45/":
-      return img45;
+      return { id: 45, img: img45, name: "Bib Fortuna" };
 
     case "https://swapi.dev/api/people/46/":
-      return img46;
+      return { id: 46, img: img46, name: "Ayla Secura" };
 
     case "https://swapi.dev/api/people/47/":
-      return img47;
+      return { id: 47, img: img47, name: "Ratts Tyerel" };
 
     case "https://swapi.dev/api/people/48/":
-      return img48;
+      return { id: 48, img: img48, name: "Dud Bolt" };
 
     case "https://swapi.dev/api/people/49/":
-      return img49;
+      return { id: 49, img: img49, name: "Gasgano" };
 
     case "https://swapi.dev/api/people/50/":
-      return img50;
+      return { id: 50, img: img50, name: "Ben Quadinaros" };
 
     case "https://swapi.dev/api/people/51/":
-      return img51;
+      return { id: 51, img: img51, name: "Mace Windu" };
 
     case "https://swapi.dev/api/people/52/":
-      return img52;
+      return { id: 52, img: img52, name: "Ki-Adi-Mundi" };
 
     case "https://swapi.dev/api/people/53/":
-      return img53;
+      return { id: 53, img: img53, name: "Kit Fisto" };
 
     case "https://swapi.dev/api/people/54/":
-      return img54;
+      return { id: 54, img: img54, name: "Eeth Koth" };
 
     case "https://swapi.dev/api/people/55/":
-      return img55;
+      return { id: 55, img: img55, name: "Adi Gallia" };
 
     case "https://swapi.dev/api/people/56/":
-      return img56;
+      return { id: 56, img: img56, name: "Saesee Tiin" };
 
     case "https://swapi.dev/api/people/57/":
-      return img57;
+      return { id: 57, img: img57, name: "Yarael Poof" };
 
     case "https://swapi.dev/api/people/58/":
-      return img58;
+      return { id: 58, img: img58, name: "Plo Koon" };
 
     case "https://swapi.dev/api/people/59/":
-      return img59;
+      return { id: 59, img: img59, name: "Mas Amedda" };
 
     case "https://swapi.dev/api/people/60/":
-      return img60;
+      return { id: 60, img: img60, name: "Gregar Typho" };
 
     case "https://swapi.dev/api/people/61/":
-      return img61;
+      return { id: 61, img: img61, name: "Cordé" };
 
     case "https://swapi.dev/api/people/62/":
-      return img62;
+      return { id: 62, img: img62, name: "Cliegg Lars" };
 
     case "https://swapi.dev/api/people/63/":
-      return img63;
+      return { id: 63, img: img63, name: "Poggle the Lesser" };
 
     case "https://swapi.dev/api/people/64/":
-      return img64;
+      return { id: 64, img: img64, name: "Luminara Unduli" };
 
     case "https://swapi.dev/api/people/65/":
-      return img65;
+      return { id: 65, img: img65, name: "Barriss Offee" };
 
     case "https://swapi.dev/api/people/66/":
-      return img66;
+      return { id: 66, img: img66, name: "Dormé" };
 
     case "https://swapi.dev/api/people/67/":
-      return img67;
+      return { id: 67, img: img67, name: "Dooku" };
 
     case "https://swapi.dev/api/people/68/":
-      return img68;
+      return { id: 68, img: img68, name: "Bail Prestor Organa" };
 
     case "https://swapi.dev/api/people/69/":
-      return img69;
+      return { id: 69, img: img69, name: "Jango Fett" };
 
     case "https://swapi.dev/api/people/70/":
-      return img70;
+      return { id: 70, img: img70, name: "Zam Wesell" };
 
     case "https://swapi.dev/api/people/71/":
-      return img71;
+      return { id: 71, img: img71, name: "Dexter Jettster" };
 
     case "https://swapi.dev/api/people/72/":
-      return img72;
+      return { id: 72, img: img72, name: "Lama Su" };
 
     case "https://swapi.dev/api/people/73/":
-      return img73;
+      return { id: 73, img: img73, name: "Taun We" };
 
     case "https://swapi.dev/api/people/74/":
-      return img74;
+      return { id: 74, img: img74, name: "Jocasta Nu" };
 
     case "https://swapi.dev/api/people/75/":
-      return img75;
+      return { id: 75, img: img75, name: "R4-P17" };
 
     case "https://swapi.dev/api/people/76/":
-      return img76;
+      return { id: 76, img: img76, name: "Wat Tambor" };
 
     case "https://swapi.dev/api/people/77/":
-      return img77;
+      return { id: 77, img: img77, name: "San Hill" };
 
     case "https://swapi.dev/api/people/78/":
-      return img78;
+      return { id: 78, img: img78, name: "Shaak Ti" };
 
     case "https://swapi.dev/api/people/79/":
-      return img79;
+      return { id: 79, img: img79, name: "Grievous" };
 
     case "https://swapi.dev/api/people/80/":
-      return img80;
+      return { id: 80, img: img80, name: "Tarfful" };
 
     case "https://swapi.dev/api/people/81/":
-      return img81;
+      return { id: 81, img: img81, name: "Raymus Antilles" };
 
     case "https://swapi.dev/api/people/82/":
-      return img82;
+      return { id: 82, img: img82, name: "Sly Moore" };
 
     case "https://swapi.dev/api/people/83/":
-      return img83;
+      return { id: 83, img: img83, name: "Tion Medon" };
 
     default:
       return notFound;

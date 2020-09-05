@@ -2,29 +2,24 @@ import React from "react";
 import { nestByPage } from "../../utils/api";
 import Select from "../../components/Select";
 import Panel from "../../components/Panel";
+import { references } from "../../utils/references/references";
 
-function Planets() {
+function Planets(props) {
   const [data, setData] = React.useState([]);
   const [page, setPage] = React.useState(1);
   const [loading, setLoading] = React.useState(false);
+  const path = props.location.pathname.substring(1);
   const results = data.results;
   const list = [];
 
   React.useEffect(() => {
     setLoading(true);
-    nestByPage(setData, "planets", page);
+    nestByPage(setData, path, page);
     return setLoading(false);
-  }, [page]);
+  }, [path, page]);
 
   for (const item in results) {
     list.push(Object.entries(results[item]));
-  }
-
-  function getId(item) {
-    return item
-      .substring(0, item.length - 1)
-      .split("/")
-      .pop(-1);
   }
 
   return list[0] === undefined || loading === true ? (
@@ -34,8 +29,9 @@ function Planets() {
   ) : (
     <div className="list-container">
       <Select counter={data.count} onChange={(e) => setPage(e.target.value)} />
-      {list.map((item) => (
+      {list.map((item, index) => (
         <Panel
+          key={index}
           image={item[13][1]}
           list={[
             item[0],
@@ -49,8 +45,8 @@ function Planets() {
             item[8],
           ]}
           imageList={[item[9], item[10]]}
-          origin="planets"
-          id={getId(item[13][1])}
+          origin={path}
+          id={references(item[13][1]).id}
         />
       ))}
     </div>

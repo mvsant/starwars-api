@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
-import { imagesReferences } from "../../utils/references/imagesReferences";
 import List from "../List";
 import { mask } from "../../utils/helpers/masks";
 import { Link } from "react-router-dom";
+import { references } from "../../utils/references/references";
 
 function Panel(props) {
   const { image, list, imageList, origin, id } = props;
@@ -15,7 +15,11 @@ function Panel(props) {
   return (
     <div className="panel">
       <Link to={payload}>
-        <img className="image" src={imagesReferences(image)} alt="" />
+        <img
+          className="image"
+          src={references(image).img}
+          alt={references(image).name}
+        />
       </Link>
       <ul className="list">
         {list.map((item, index) => (

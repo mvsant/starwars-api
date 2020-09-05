@@ -2,30 +2,24 @@ import React from "react";
 import { nestByPage } from "../../utils/api";
 import Select from "../../components/Select";
 import Panel from "../../components/Panel";
+import { references } from "../../utils/references/references";
 
-function People() {
+function People(props) {
   const [data, setData] = React.useState([]);
   const [page, setPage] = React.useState(1);
   const [loading, setLoading] = React.useState(false);
   const results = data.results;
+  const path = props.location.pathname.substring(1);
   const list = [];
 
   React.useEffect(() => {
     setLoading(true);
-    nestByPage(setData, "people", page);
-    //setTimeout(() => setLoading(false), 1500)
+    nestByPage(setData, path, page);
     return setLoading(false);
-  }, [page]);
+  }, [path, page]);
 
   for (const item in results) {
     list.push(Object.entries(results[item]));
-  }
-
-  function getId(item) {
-    return item
-      .substring(0, item.length - 1)
-      .split("/")
-      .pop(-1);
   }
 
   return list[0] === undefined || loading === true ? (
@@ -35,8 +29,9 @@ function People() {
   ) : (
     <div className="list-container">
       <Select counter={data.count} onChange={(e) => setPage(e.target.value)} />
-      {list.map((item) => (
+      {list.map((item, index) => (
         <Panel
+          key={index}
           image={item[15][1]}
           list={[
             item[0],
@@ -49,8 +44,8 @@ function People() {
             item[7],
           ]}
           imageList={[item[8], item[9], item[10], item[11], item[12]]}
-          origin="people"
-          id={getId(item[15][1])}
+          origin={path}
+          id={references(item[15][1]).id}
         />
       ))}
     </div>

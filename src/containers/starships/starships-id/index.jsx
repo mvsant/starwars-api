@@ -1,24 +1,17 @@
 import React from "react";
 import Panel from "../../../components/Panel";
-import { nestByCategory } from "../../../utils/api";
+import { nestByOne } from "../../../utils/api";
+import { references } from "../../../utils/references/references";
 
 function StarshipsId(props) {
   const [data, setData] = React.useState([]);
   const list = [];
-  const id = props.match.params.id;
-  const origin = props.location.category;
+  const path = props.location.pathname.substring(1);
 
   React.useEffect(() => {
-    nestByCategory(setData, origin, id);
-  }, [origin, id]);
+    nestByOne(setData, path);
+  }, [path]);
   Object.entries(data).map((item) => list.push(item));
-
-  function getId(item) {
-    return item
-      .substring(0, item.length - 1)
-      .split("/")
-      .pop(-1);
-  }
 
   return list[0] === undefined ? (
     <div className="panel">
@@ -44,7 +37,7 @@ function StarshipsId(props) {
       ]}
       imageList={[list[13], list[14]]}
       origin="starships"
-      id={getId(list[17][1])}
+      id={references(list[17][1]).id}
     />
   );
 }
