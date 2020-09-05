@@ -6,14 +6,28 @@
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  margin-bottom: 1rem;
+  background-color: var(--transparency-dark);
+}
+
+.hide-nav {
+  display: none;
+}
+
+.show-nav {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 nav ul li {
   list-style-type: none;
   display: inline-block;
-  padding: 0 1rem;
+  font-size: 1.2rem;
+  padding: 0.4rem;
 }
 
 nav ul li a {
@@ -26,4 +40,27 @@ header a {
 
 header a:visited {
   color: var(--primary-color-dark);
+}
+
+button {
+  order: 3;
+  font-size: 30px;
+  margin-right: 30px;
+  color: var(--secondary-color);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  button {
+    display: none;
+  }
+
+  .hide-nav,
+  .show-nav {
+    display: flex;
+    flex-direction: row;
+  }
 }

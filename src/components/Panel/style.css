@@ -72,6 +72,10 @@
   color: black;
 }
 
+.list ul a {
+  color: #222222;
+}
+
 .list ul a > * {
   margin: 0.4rem;
 }
