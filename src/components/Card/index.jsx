@@ -1,18 +1,21 @@
 import React from "react";
-import "./style.css";
+import CardMedia from "@material-ui/core/CardMedia";
+import CardContent from "@material-ui/core/CardContent";
+import Typography from "@material-ui/core/Typography";
+import { CardStyled } from "./style";
 
-export function Card(props) {
-  const { title, img } = props;
+export default function NewCard({ title, img }) {
   return (
-    <div className="card">
-      <div className="card-title">
-        <h3>{title || "card title"}</h3>
-      </div>
-      <div className="card-image">
-        <img className="card-image" src={img} alt={title + "image"} />
-      </div>
-    </div>
+    <CardStyled>
+      <CardContent>
+        <Typography variant="h5">{title || "Card Title"}</Typography>
+      </CardContent>
+      <CardMedia
+        image={img}
+        title={title + " image"}
+        height="160"
+        component="img"
+      />
+    </CardStyled>
   );
 }
-
-export default Card;

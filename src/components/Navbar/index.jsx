@@ -1,50 +1,35 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/star.png";
-import "./style.css";
+//import "./style.css";
+import { StyledImage, StyledHeader, StyledButton, StyledNav } from "./style";
+import Options from "./Options";
 
 function Navbar() {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <header>
-      <button
+    <StyledHeader>
+      <StyledButton
         onClick={() => {
           setToggle(!toggle);
         }}
       >
         {toggle ? "X" : " \u2630 "}
-      </button>
+      </StyledButton>
       <Link to="/">
-        <img
-          className="topTitle"
-          src={logo}
-          alt="StarWars logo, link to home"
-        />
+        <StyledImage src={logo} alt="StarWars logo, link to home" />
       </Link>
-      <nav>
-        <ul className={toggle ? "show-nav" : "hide-nav"}>
-          <li>
-            <Link to="/people">People</Link>
-          </li>
-          <li>
-            <Link to="/planets">Planets</Link>
-          </li>
-          <li>
-            <Link to="/films">Films</Link>
-          </li>
-          <li>
-            <Link to="/vehicles">vehicles</Link>
-          </li>
-          <li>
-            <Link to="/starships">starships</Link>
-          </li>
-          <li>
-            <Link to="/species">Species</Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+      {toggle ? (
+        <StyledNav>
+          <Options />
+        </StyledNav>
+      ) : (
+        <StyledNav visibility="none">
+          <Options />
+        </StyledNav>
+      )}
+    </StyledHeader>
   );
 }
 

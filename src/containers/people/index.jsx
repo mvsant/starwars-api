@@ -3,6 +3,7 @@ import { nestByPage } from "../../utils/api";
 import Select from "../../components/Select";
 import Panel from "../../components/Panel";
 import { references } from "../../utils/references/references";
+import Loading from "../../components/Loading";
 
 function People(props) {
   const [data, setData] = React.useState([]);
@@ -24,7 +25,7 @@ function People(props) {
 
   return list[0] === undefined || loading === true ? (
     <div className="panel">
-      <div className="list">"Loading"</div>
+      <Loading />
     </div>
   ) : (
     <div className="list-container">
