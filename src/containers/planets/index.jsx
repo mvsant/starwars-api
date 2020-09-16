@@ -1,7 +1,7 @@
 import React from "react";
 import Panel from "../../components/Panel";
 import { references } from "../../utils/references/references";
-import Main from "../Main";
+import Main from "../../components/Main";
 
 export default function Planets(props) {
   const path = props.location.pathname.substring(1);

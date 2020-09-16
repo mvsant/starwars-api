@@ -1,17 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { nestByPage } from "../../utils/api";
-import Loading from "../../components/Loading";
+import Loading from "../Loading";
 import { Select } from "@material-ui/core";
 
 export default function Main(props) {
-  const [data, setData] = React.useState([]);
-  const [page, setPage] = React.useState(1);
-  const [loading, setLoading] = React.useState(false);
+  const [data, setData] = useState([]);
+  const [page, setPage] = useState(1);
+  const [loading, setLoading] = useState(false);
   const results = data.results;
   const path = props;
   const list = [];
 
-  React.useEffect(() => {
+  useEffect(() => {
     setLoading(true);
     nestByPage(setData, path.path, page);
     return setLoading(false);
