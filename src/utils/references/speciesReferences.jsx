@@ -29,13 +29,13 @@ import img27 from "../../assets/images/species_images/Mas_Amedda_SWE.png";
 import img28 from "../../assets/images/species_images/Geonosian_NEGAS.png";
 import img29 from "../../assets/images/species_images/Mirialan_Diplomat.png";
 import img30 from "../../assets/images/species_images/Clawdite_Shapeshifter_AoN.png";
-import img31 from "../../assets/images/species_images/Dexter_Jettster_%28Besalisk%29_FF44.jpg";
+import img31 from "../../assets/images/species_images/Dexter_Jettster.jpg";
 import img32 from "../../assets/images/species_images/Kaminoan_FO_Arden_Beckwith.png";
 import img33 from "../../assets/images/species_images/Wat_Tambor_SWE.png";
 import img34 from "../../assets/images/species_images/N_Card.jpg";
 import img35 from "../../assets/images/species_images/ShaakTi-TCWs3BR1.png";
 import img36 from "../../assets/images/species_images/Kaleesh-Alien_Archive.jpg";
-import img37 from "../../assets/images/species_images/Pau%27an.jpg";
+import img37 from "../../assets/images/species_images/Pauan.jpg";
 
 // A pretty ugly hardcoded image seeker
 export default function speciesReferences(url) {

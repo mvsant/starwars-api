@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { nestByPage } from "../../utils/api";
 import Loading from "../Loading";
-import { Select } from "@material-ui/core";
+import { StyledPanelArea } from "../../styles/commomStyles";
+import Select from "../Select";
 
 export default function Main(props) {
   const [data, setData] = useState([]);
@@ -22,9 +23,9 @@ export default function Main(props) {
   }
 
   return list[0] === undefined || loading === true ? (
-    <div className="panel">
+    <StyledPanelArea>
       <Loading />
-    </div>
+    </StyledPanelArea>
   ) : (
     <div className="list-container">
       <Select counter={data.count} onChange={(e) => setPage(e.target.value)} />

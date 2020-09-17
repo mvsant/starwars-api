@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledImage = styled.img`
+export const StyledLogoImage = styled.img`
   width: 50%;
   height: 60%;
   transform: perspective(200px) rotateX(40deg);

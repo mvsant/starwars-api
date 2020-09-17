@@ -1,12 +1,13 @@
 import React from "react";
 import Miniatures from "../Miniatures";
 import { mask } from "../../utils/helpers/masks";
+import { StyledListArea } from "../../styles/commomStyles";
 
 function List(props) {
   const { list, title } = props;
 
   return (
-    <div className="list">
+    <StyledListArea>
       {mask(title)} :
       <ul>
         {list.length === 0
@@ -17,7 +18,7 @@ function List(props) {
               </li>
             ))}
       </ul>
-    </div>
+    </StyledListArea>
   );
 }
 export default List;

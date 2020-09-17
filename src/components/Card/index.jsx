@@ -4,7 +4,7 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { CardStyled } from "./style";
 
-export default function NewCard({ title, img }) {
+export default function Card({ title, img }) {
   return (
     <CardStyled>
       <CardContent>

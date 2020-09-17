@@ -1,9 +1,14 @@
 import React from "react";
-import "./style.css";
 import List from "../List";
 import { mask } from "../../utils/helpers/masks";
 import { Link } from "react-router-dom";
 import { references } from "../../utils/references/references";
+import {
+  StyledPanelArea,
+  StyledPanelImage,
+  StyledListArea,
+  StyledImageList,
+} from "../../styles/commomStyles";
 
 function Panel(props) {
   const { image, list, imageList, origin, id } = props;
@@ -13,22 +18,21 @@ function Panel(props) {
   };
 
   return (
-    <div className="panel">
+    <StyledPanelArea>
       <Link to={payload}>
-        <img
-          className="image"
+        <StyledPanelImage
           src={references(image).img}
           alt={references(image).name}
         />
       </Link>
-      <ul className="list">
+      <StyledListArea>
         {list.map((item, index) => (
           <li key={index}>
             {mask(item[0])}: {item[1]}
           </li>
         ))}
-      </ul>
-      <div className="image-list">
+      </StyledListArea>
+      <StyledImageList>
         {imageList.map((item, index) =>
           typeof item[1] === "string" ? (
             <List key={index} title={item[0]} list={[item[1]]} />
@@ -36,8 +40,8 @@ function Panel(props) {
             <List key={index} title={item[0]} list={item[1]} />
           )
         )}
-      </div>
-    </div>
+      </StyledImageList>
+    </StyledPanelArea>
   );
 }
 export default Panel;

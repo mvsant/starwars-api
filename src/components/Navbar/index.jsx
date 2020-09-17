@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/star.png";
 //import "./style.css";
-import { StyledImage, StyledHeader, StyledButton, StyledNav } from "./style";
+import {
+  StyledLogoImage,
+  StyledHeader,
+  StyledButton,
+  StyledNav,
+} from "./style";
 import Options from "./Options";
 
 function Navbar() {
@@ -18,7 +23,7 @@ function Navbar() {
         {toggle ? "X" : " \u2630 "}
       </StyledButton>
       <Link to="/">
-        <StyledImage src={logo} alt="StarWars logo, link to home" />
+        <StyledLogoImage src={logo} alt="StarWars logo, link to home" />
       </Link>
       {toggle ? (
         <StyledNav>
