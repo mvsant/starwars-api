@@ -9,7 +9,7 @@ test("renders navigation Links", () => {
       <Navbar />
     </BrowserRouter>
   );
-  const navHome = getByText("Home");
+  const navHome = getByText("People");
 
   expect(navHome).toBeInTheDocument();
 });

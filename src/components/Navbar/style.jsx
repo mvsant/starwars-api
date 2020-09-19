@@ -56,5 +56,5 @@ export const StyledNav = styled.nav`
 
 export const activeStyle = {
   fontWeight: "bold",
-  color: "var(--primary-color)",
+  color: "var(--secondary-color)",
 };

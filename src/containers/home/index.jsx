@@ -2,9 +2,9 @@ import React from "react";
 import { index, baseUrl } from "../../utils/api";
 import { Link } from "react-router-dom";
 import { urlMask, namesMask } from "../../utils/helpers/masks";
-import "./style.css";
 import { references } from "../../utils/references/references";
 import Card from "../../components/Card";
+import { StyledHome, StyledHomeList } from "./style";
 
 function Home() {
   let [data, setData] = React.useState(""); // state hook
@@ -18,10 +18,10 @@ function Home() {
       <div className="list">"Loading"</div>
     </div>
   ) : (
-    <div className="home">
+    <StyledHome>
       <h1>Welcome to Stars Wars API!</h1>
       <h2>Dive into some SW informations:</h2>
-      <div className="home-list">
+      <StyledHomeList>
         {Object.entries(data).map((item, index) => (
           <Link key={index} to={urlMask(item[1])}>
             <Card
@@ -30,9 +30,9 @@ function Home() {
             ></Card>
           </Link>
         ))}
-      </div>
+      </StyledHomeList>
       <h2>A long time ago, in a galaxy far,far away...</h2>
-    </div>
+    </StyledHome>
   );
 }
 

@@ -29,3 +29,9 @@ export async function nestByCategory(setData, parameter, page) {
     .then((response) => response.json())
     .then((data) => setData(data));
 }
+
+export async function nestByQuery(setData, parameter, query, page) {
+  await fetch(`${baseUrl}${parameter}/?search=${query}&page=${page}`)
+    .then((response) => response.json())
+    .then((data) => setData(data));
+}

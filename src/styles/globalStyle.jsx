@@ -1,5 +1,18 @@
 import { createGlobalStyle } from "styled-components";
 import backgroundImg from "../assets/bg.jpg";
+import { createMuiTheme } from "@material-ui/core";
+
+export const theme = createMuiTheme({
+  overrides: {
+    MuiPaper: {
+      root: {
+        padding: "1px",
+        marginBottom: "2px",
+        backgroundColor: "var(--transparency-dark)",
+      },
+    },
+  },
+});
 
 const globalStyle = createGlobalStyle`
 * {
@@ -30,7 +43,6 @@ html, body {
   background: url(${backgroundImg});
   height:100%;
   width:100%;
-  background-position: center center;
 }
 h1 {
   font-size: 3rem;

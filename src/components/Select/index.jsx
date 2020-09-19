@@ -1,6 +1,10 @@
 import React from "react";
-import { StyledSelect, StyledInputLabel, StyledMenuItem } from "./style";
-import FormControl from "@material-ui/core/FormControl";
+import {
+  StyledSelect,
+  StyledInputLabel,
+  StyledMenuItem,
+  StyledFormControl,
+} from "./style";
 
 function Select(props) {
   let { counter, onChange } = props;
@@ -15,12 +19,12 @@ function Select(props) {
   }
 
   return (
-    <FormControl>
+    <StyledFormControl>
       <StyledInputLabel>Page</StyledInputLabel>
-      <StyledSelect variant="filled" onChange={onChange}>
+      <StyledSelect disableUnderline onChange={onChange}>
         {list}
       </StyledSelect>
-    </FormControl>
+    </StyledFormControl>
   );
 }
 export default Select;
