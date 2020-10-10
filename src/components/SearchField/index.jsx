@@ -1,4 +1,5 @@
 import React from "react";
+import { StyledInputLabel } from "../Select/style";
 import {
   StyledSearchContainer,
   StyledSearchField,
@@ -6,12 +7,12 @@ import {
 } from "./style";
 
 export default function Search(props) {
-  const { placeholder, value, onChange, onClick } = props;
+  const { value, onChange, onClick } = props;
 
   return (
     <StyledSearchContainer>
-      <StyledSearchField
-        placeholder={placeholder}
+      <StyledInputLabel>Search</StyledInputLabel>
+      <StyledSearchField 
         value={value}
         onChange={onChange}
       />

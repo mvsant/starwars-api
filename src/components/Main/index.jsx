@@ -46,7 +46,6 @@ export default function Main(props) {
         }}
       />
       <Search
-        placeholder="Search..."
         value={query}
         onChange={(event) => setQuery(event.target.value)}
         onClick={() => {
