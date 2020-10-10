@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-export const MainArea = styled.div`
+export const FieldArea = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-around;
 `;

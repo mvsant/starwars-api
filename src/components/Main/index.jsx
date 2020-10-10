@@ -3,7 +3,7 @@ import { nestByPage, nestByQuery } from "../../utils/api";
 import Loading from "../Loading";
 import { StyledPanelArea } from "../../styles/commomStyles";
 import Select from "../Select";
-import { MainArea } from "./style";
+import { FieldArea } from "./style";
 import Search from "../SearchField";
 
 export default function Main(props) {
@@ -37,8 +37,9 @@ export default function Main(props) {
       <Loading />
     </StyledPanelArea>
   ) : (
-    <MainArea>
-      <Select
+    <>
+    <FieldArea>
+      <Select 
         counter={data.count}
         onChange={(e) => {
           setPage(e.target.value);
@@ -54,7 +55,8 @@ export default function Main(props) {
           console.log(search);
         }}
       />
+    </FieldArea>
       {props.children(list)}
-    </MainArea>
+    </>
   );
 }

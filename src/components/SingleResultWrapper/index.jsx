@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Loading from "../Loading";
 import { StyledPanelArea } from "../../styles/commomStyles";
 import { nestByOne } from "../../utils/api";
-import { MainArea } from "../Main/style";
 
 export default function SingleResultWrapper(props) {
   const [data, setData] = useState([]);
@@ -23,7 +22,7 @@ export default function SingleResultWrapper(props) {
       <Loading />
     </StyledPanelArea>
   ) : (
-    <MainArea>{props.children({ list: list })}</MainArea>
+    <>{props.children({ list: list })}</>
   );
 }
 /**
