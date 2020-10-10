@@ -33,8 +33,8 @@ export default function Routes() {
         <Route path="/people/:id" component={PeopleId} />
         <Route exact path="/planets" component={Planets} />
         <Route path="/planets/:id" component={PlanetsId} />
+        <Route path="/page_not_found" component={page404} />
         <Route exact path="/" component={Home} />
-        <Route component={page404} />
       </Switch>
     </Router>
   );

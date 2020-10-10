@@ -165,7 +165,7 @@ export default function planetsReferences(url) {
     case "https://swapi.dev/api/planets/34/":
       return { id: 34, img: img34, name: "Toydaria" };
 
-    case "https://swapi.dev/api/planets//35":
+    case "https://swapi.dev/api/planets/35/":
       return { id: 35, img: img35, name: "Malastare" };
 
     case "https://swapi.dev/api/planets/36/":
