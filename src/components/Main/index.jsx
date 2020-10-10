@@ -5,6 +5,7 @@ import { StyledPanelArea } from "../../styles/commomStyles";
 import Select from "../Select";
 import { FieldArea } from "./style";
 import Search from "../SearchField";
+import { Redirect } from "react-router-dom";
 
 export default function Main(props) {
   const [data, setData] = useState([]);
@@ -16,22 +17,32 @@ export default function Main(props) {
   const path = props;
   const list = [];
 
+  useEffect(()=>{
+    nestByPage(setData, path.path, page);
+    return setLoading(false);
+  },[page,path])
+
   useEffect(() => {
     setLoading(true);
-    if (query === "") {
-      nestByPage(setData, path.path, page);
-      return setLoading(false);
-    } else {
+    if (search === true) {
       nestByQuery(setData, path.path, query, page);
       setSearch(false);
+      setQuery('');
       return setLoading(false);
     }
+    setLoading(false);
   }, [path, page, search, query]);
+  
+  console.log(data);
 
   for (const item in results) {
     list.push(Object.entries(results[item]));
   }
-
+  
+if(data.count === 0){
+return <Redirect to="/page_not_found"/>
+}
+else
   return loading === true || list[0] === undefined ? (
     <StyledPanelArea>
       <Loading />
@@ -51,7 +62,13 @@ export default function Main(props) {
         onClick={() => {
           setPage(1);
           setSearch(true);
-          console.log(search);
+        }}
+        onKeyPress={(event) => {
+          if (event.key === 'Enter') {
+            setPage(1);
+            setSearch(true);
+            event.preventDefault();
+          }
         }}
       />
     </FieldArea>

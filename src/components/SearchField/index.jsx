@@ -7,7 +7,7 @@ import {
 } from "./style";
 
 export default function Search(props) {
-  const { value, onChange, onClick } = props;
+  const { value, onChange, onClick,onKeyPress } = props;
 
   return (
     <StyledSearchContainer>
@@ -15,8 +15,9 @@ export default function Search(props) {
       <StyledSearchField 
         value={value}
         onChange={onChange}
+        onKeyPress={onKeyPress}
       />
-      <StyledButton onClick={onClick}>
+      <StyledButton type="submit" onClick={onClick}>
         <span role="img" aria-label="search">
           &#128270;
         </span>
