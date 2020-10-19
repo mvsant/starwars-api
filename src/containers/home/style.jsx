@@ -4,6 +4,10 @@ import Card from "../../components/Card";
 export const CardStyled = styled(Card)`
   background-color: var(--transparency-dark);
   border: 1px solid var(--secondary-color);
+  img{
+    height:auto;
+    max-width:50px;
+}
 `;
 
 export const StyledHome = styled.div`
@@ -18,8 +22,7 @@ export const StyledHome = styled.div`
 
 export const StyledHomeList = styled.div`
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  min-height: 100vh;
   a {
     margin: 1rem 2rem;
     text-decoration: none;
@@ -27,5 +30,14 @@ export const StyledHomeList = styled.div`
   }
   a:visited {
     color: var(--secondary-color-dark);
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+  img {
+    height: 50vh;
+    object-position: 0 50%;
+    object-position: 0 0;
+
+  }
   }
 `;

@@ -9,10 +9,7 @@ export default function Species(props) {
     <>
       <Main path={path}>
         {(props) =>
-          props.map((item, index) =>
-            item[8][1] === null ? (
-              (item[8][1] = [])
-            ) : (
+          props.map((item, index) => (
               <Panel
                 key={index}
                 image={item[14][1]}

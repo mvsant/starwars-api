@@ -10,7 +10,7 @@ function List(props) {
     <StyledListArea>
       {mask(title)} :
       <ul>
-        {list.length === 0
+        {(list && list.length === 0) || list === null
           ? "N/A"
           : list.map((item, index) => (
               <li key={index + Math.random()}>
