@@ -30,7 +30,8 @@ box-sizing:border-box;
 body {
   line-height: normal;
   font-family: "Karla", sans-serif;
-  background-color: black
+  background-color: black;
+  background: url(${backgroundImg});
 }
 html, body {
   width: 100%;
@@ -39,11 +40,7 @@ html, body {
   padding: 0;
   margin: 0;
 }
-#root {
-  background: url(${backgroundImg});
-  height:100%;
-  width:100%;
-}
+
 h1 {
   font-size: 3rem;
 }
