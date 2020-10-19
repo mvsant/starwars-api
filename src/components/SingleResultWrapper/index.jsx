@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Loading from "../Loading";
 import { StyledPanelArea } from "../../styles/commomStyles";
 import { nestByOne } from "../../utils/api";
+import { Redirect } from "react-router-dom";
 
 export default function SingleResultWrapper(props) {
   const [data, setData] = useState([]);
@@ -15,8 +16,13 @@ export default function SingleResultWrapper(props) {
     return setLoading(false);
   }, [path]);
 
+  console.log(data.detail);
   Object.entries(data).map((item) => list.push(item));
 
+if(data.detail==="Not found"){
+  return <Redirect to="/page_not_found"/>
+}
+else{
   return list[0] === undefined || loading === true ? (
     <StyledPanelArea>
       <Loading />
@@ -24,7 +30,7 @@ export default function SingleResultWrapper(props) {
   ) : (
     <>{props.children({ list: list })}</>
   );
-}
+}}
 /**
  The child will receive props.list because the object is composed manually:
  props.children({ list: list })

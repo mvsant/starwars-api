@@ -25,5 +25,5 @@ export const LoadContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
+  width:100vw;
 `;

@@ -35,6 +35,7 @@ export default function Routes() {
         <Route path="/planets/:id" component={PlanetsId} />
         <Route path="/page_not_found" component={page404} />
         <Route exact path="/" component={Home} />
+        <Route path="*" component={page404} status={404} />
       </Switch>
     </Router>
   );
