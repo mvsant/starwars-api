@@ -22,7 +22,7 @@ export const StyledHome = styled.div`
 
 export const StyledHomeList = styled.div`
   display: flex;
-  min-height: 100vh;
+  min-height: 60vh;
   a {
     margin: 1rem 2rem;
     text-decoration: none;
