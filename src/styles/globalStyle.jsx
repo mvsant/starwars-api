@@ -30,13 +30,12 @@ box-sizing:border-box;
 body {
   line-height: normal;
   font-family: "Karla", sans-serif;
-  background-color: black;
   background: url(${backgroundImg});
+  background-color: black;
 }
 html, body {
   width: 100%;
   min-height:100%;
-  display: flex;
   padding: 0;
   margin: 0;
 }

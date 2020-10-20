@@ -1,7 +1,14 @@
 import React from "react";
+import Img from "../../assets/not_found.gif"
+import { StyledNotFound } from "./style";
 
 function page404() {
-  return <h1>Page not found</h1>;
+  return (
+    <StyledNotFound>
+    <h1>Page not found</h1>
+    <img src={Img} alt="Page no Found"/>
+    </StyledNotFound>
+  );
 }
 
 export default page404;
