@@ -13,7 +13,7 @@ export async function indexFullPath(setData, url) {
 }
 
 export async function nestByOne(setData, parameter) {
-  await fetch(`${baseUrl}${parameter}`, {referrerPolicy: 'same-origin'})
+  await fetch(`${baseUrl}${parameter}`, {referrer: "", cache: "no-store"})
     .then((response) => response.json())
     .then((data) => setData(data))
 }
