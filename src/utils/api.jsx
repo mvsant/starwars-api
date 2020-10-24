@@ -13,7 +13,7 @@ export async function indexFullPath(setData, url) {
 }
 
 export async function nestByOne(setData, parameter) {
-  await fetch(`${baseUrl}${parameter}`)
+  await fetch(`${baseUrl}${parameter}`, {referrerPolicy: 'no-referrer-when-downgrade'})
     .then((response) => response.json())
     .then((data) => setData(data))
 }
