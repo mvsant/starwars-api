@@ -15,14 +15,14 @@ export default function SingleResultWrapper(props) {
      nestByOne(setData, path.path);
     return setLoading(false);
   }, [path]);
-
+console.log(path.path);
   Object.entries(data).map((item) => list.push(item));
 
 if(data.detail==="Not found"){
   return <Redirect to="/page_not_found"/>
 }
 else{
-  return list[0] === undefined || loading === true ? (
+  return loading === true || list[0] === undefined ? (
     <StyledPanelArea>
       <Loading />
     </StyledPanelArea>

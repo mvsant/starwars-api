@@ -13,7 +13,7 @@ export async function indexFullPath(setData, url) {
 }
 
 export async function nestByOne(setData, parameter) {
-  await fetch(`${baseUrl}${parameter}`,{cache:"no-cache"})
+  await fetch(`${baseUrl}${parameter}/`,{cache:"no-cache"})
     .then((response) => response.json())
     .then((data) => setData(data))
 }
