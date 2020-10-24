@@ -19,7 +19,7 @@ export async function nestByOne(setData, parameter) {
 }
 
 export async function nestByPage(setData, parameter, page) {
-  await fetch(`${baseUrl}${parameter}/?search=&page=${page}`)
+  await fetch(`${baseUrl}${parameter}/?search=&page=${page}`,{cache:"no-cache"})
     .then((response) => response.json())
     .then((data) => setData(data));
 }
@@ -31,7 +31,7 @@ export async function nestByCategory(setData, parameter, page) {
 }
 
 export async function nestByQuery(setData, parameter, query, page) {
-  await fetch(`${baseUrl}${parameter}/?search=${query}&page=${page}`)
+  await fetch(`${baseUrl}${parameter}/?search=${query}&page=${page}`,{cache:"no-cache"})
     .then((response) => response.json())
     .then((data) => setData(data))
 }

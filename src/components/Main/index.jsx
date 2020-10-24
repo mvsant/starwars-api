@@ -16,15 +16,15 @@ export default function Main(props) {
   const path = props;
   const list = [];
 
-  useEffect(()=>{
-    nestByPage(setData, path.path, page);
+  useEffect(  ()=>{
+     nestByPage(setData, path.path, page);
     return setLoading(false);
   },[page,path])
 
-  useEffect(() => {
+  useEffect( () => {
     setLoading(true);
     if (search === true) {
-      nestByQuery(setData, path.path, query, page);
+       nestByQuery(setData, path.path, query, page);
       setSearch(false);
       setQuery('');
       return setLoading(false);

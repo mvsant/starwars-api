@@ -10,9 +10,9 @@ export default function SingleResultWrapper(props) {
   const list = [];
   const path = props;
 
-  useEffect(() => {
+  useEffect( () => {
     setLoading(true);
-    nestByOne(setData, path.path);
+     nestByOne(setData, path.path);
     return setLoading(false);
   }, [path]);
 
