@@ -47,22 +47,21 @@ export default function Main(props) {
       <Select 
         counter={data.count}
         onChange={(e) => {
-          setPage(e.target.value);
+          setPage(e.target.value);    
         }}
         page={page}
       />
       <Search
         value={query}
         onChange={(event) => setQuery(event.target.value)}
-        onClick={() => {
+        onClick={event => {
           setPage(1);
-          setSearch(true);
+          setSearch(true);    
         }}
         onKeyPress={(event) => {
           if (event.key === 'Enter') {
             setPage(1);
-            setSearch(true);
-            event.preventDefault();
+            setSearch(true);      
           }
         }}
       />

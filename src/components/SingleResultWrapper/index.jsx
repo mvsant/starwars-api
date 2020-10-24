@@ -37,6 +37,6 @@ else{
  props.children(list) Will be props in child.
  NOTE: You can destructure your variable as permitted in Javascript.
  **
- The porps must be "initialised on child component or it will return an undefined result."
+ The props must be "initialised on child component or it will return an undefined result."
 />
  */
