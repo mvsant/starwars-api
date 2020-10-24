@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import backgroundImg from "../assets/bg.jpg";
-import { createMuiTheme } from "@material-ui/core";
+import { unstable_createMuiStrictModeTheme as createMuiTheme } from '@material-ui/core';
 
 export const theme = createMuiTheme({
   overrides: {

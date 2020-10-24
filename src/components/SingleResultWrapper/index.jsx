@@ -16,7 +16,6 @@ export default function SingleResultWrapper(props) {
     return setLoading(false);
   }, [path]);
 
-  console.log(data.detail);
   Object.entries(data).map((item) => list.push(item));
 
 if(data.detail==="Not found"){
