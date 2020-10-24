@@ -1,4 +1,4 @@
-export const baseUrl = "https://swapi.dev/api/";
+export const baseUrl = "http://swapi.dev/api/";
 
 export async function index(setData) {
   await fetch(baseUrl)
