@@ -49,6 +49,7 @@ export default function Main(props) {
         onChange={(e) => {
           setPage(e.target.value);
         }}
+        page={page}
       />
       <Search
         value={query}

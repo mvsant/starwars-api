@@ -6,8 +6,7 @@ import {
   StyledFormControl,
 } from "./style";
 
-function Select(props) {
-  let { counter, onChange } = props;
+function Select({ counter, onChange, page }) {
   let list = [];
 
   for (let i = 0; i < counter / 10; i++) {
@@ -17,11 +16,11 @@ function Select(props) {
       </StyledMenuItem>
     );
   }
-
+  
   return (
     <StyledFormControl>
       <StyledInputLabel>Page</StyledInputLabel>
-      <StyledSelect disableUnderline onChange={onChange}>
+      <StyledSelect disableUnderline onChange={onChange} value={page} >
         {list}
       </StyledSelect>
     </StyledFormControl>
