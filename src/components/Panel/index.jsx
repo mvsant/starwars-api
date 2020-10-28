@@ -1,6 +1,6 @@
 import React from "react";
 import List from "../List";
-import { mask } from "../../utils/helpers/masks";
+import { categoryMask, mask } from "../../utils/helpers/masks";
 import { Link } from "react-router-dom";
 import { references } from "../../utils/references/references";
 import {
@@ -28,7 +28,7 @@ function Panel(props) {
       <StyledListArea>
         {list.map((item, index) => (
           <li key={index}>
-            {mask(item[0])}: {item[1]}
+            {mask(item[0])}: {categoryMask(item[0],item[1])}
           </li>
         ))}
       </StyledListArea>
