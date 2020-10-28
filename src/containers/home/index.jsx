@@ -18,22 +18,22 @@ function Home() {
       <div className="list">"Loading"</div>
     </div>
   ) : (
-    <StyledHome>
-      <h1>Welcome to Stars Wars API!</h1>
-      <h2>Dive into some SW informations:</h2>
-      <StyledHomeList>
-        {Object.entries(data).map((item, index) => (
-          <Link key={index} to={urlMask(item[1])}>
-            <Card
-              title={namesMask(item[0])}
-              img={references(baseUrl + item[0] + "/4/").img}
-            ></Card>
-          </Link>
-        ))}
-      </StyledHomeList>
-      <h2>A long time ago, in a galaxy far,far away...</h2>
-    </StyledHome>
-  );
+      <StyledHome>
+        <h1>Welcome to Stars Wars API!</h1>
+        <h2>Dive into some SW informations:</h2>
+        <StyledHomeList>
+          {Object.entries(data).map((item, index) => (
+            <Link key={index} to={urlMask(item[1])}>
+              <Card
+                title={namesMask(item[0])}
+                img={references(baseUrl + item[0] + "/4/").img}
+              ></Card>
+            </Link>
+          ))}
+        </StyledHomeList>
+        <h2>A long time ago, in a galaxy far,far away...</h2>
+      </StyledHome>
+    );
 }
 
 export default Home;

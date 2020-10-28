@@ -10,26 +10,27 @@ export default function SingleResultWrapper(props) {
   const list = [];
   const path = props;
 
-  useEffect( () => {
+  useEffect(() => {
     setLoading(true);
-     nestByOne(setData, path.path);
+    nestByOne(setData, path.path);
     return setLoading(false);
   }, [path]);
-console.log(path.path);
+  console.log(path.path);
   Object.entries(data).map((item) => list.push(item));
 
-if(data.detail==="Not found"){
-  return <Redirect to="/page_not_found"/>
+  if (data.detail === "Not found") {
+    return <Redirect to="/page_not_found" />
+  }
+  else {
+    return loading === true || list[0] === undefined ? (
+      <StyledPanelArea>
+        <Loading />
+      </StyledPanelArea>
+    ) : (
+        <>{props.children({ list: list })}</>
+      );
+  }
 }
-else{
-  return loading === true || list[0] === undefined ? (
-    <StyledPanelArea>
-      <Loading />
-    </StyledPanelArea>
-  ) : (
-    <>{props.children({ list: list })}</>
-  );
-}}
 /**
  The child will receive props.list because the object is composed manually:
  props.children({ list: list })

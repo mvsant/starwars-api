@@ -30,10 +30,10 @@ function Navbar() {
           <Options />
         </StyledNav>
       ) : (
-        <StyledNav visibility="none">
-          <Options />
-        </StyledNav>
-      )}
+          <StyledNav visibility="none">
+            <Options />
+          </StyledNav>
+        )}
     </StyledHeader>
   );
 }

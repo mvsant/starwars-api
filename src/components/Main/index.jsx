@@ -16,15 +16,15 @@ export default function Main(props) {
   const path = props;
   const list = [];
 
-  useEffect(  ()=>{
-     nestByPage(setData, path.path, page);
+  useEffect(() => {
+    nestByPage(setData, path.path, page);
     return setLoading(false);
-  },[page,path])
+  }, [page, path])
 
-  useEffect( () => {
+  useEffect(() => {
     setLoading(true);
     if (search === true) {
-       nestByQuery(setData, path.path, query, page);
+      nestByQuery(setData, path.path, query, page);
       setSearch(false);
       setQuery('');
       return setLoading(false);
@@ -35,38 +35,37 @@ export default function Main(props) {
   for (const item in results) {
     list.push(Object.entries(results[item]));
   }
-  
 
   return loading === true || list[0] === undefined ? (
     <StyledPanelArea>
       <Loading />
     </StyledPanelArea>
   ) : (
-    <>
-    <FieldArea>
-      <Select 
-        counter={data.count}
-        onChange={(e) => {
-          setPage(e.target.value);    
-        }}
-        page={page}
-      />
-      <Search
-        value={query}
-        onChange={(event) => setQuery(event.target.value)}
-        onClick={event => {
-          setPage(1);
-          setSearch(true);    
-        }}
-        onKeyPress={(event) => {
-          if (event.key === 'Enter') {
-            setPage(1);
-            setSearch(true);      
-          }
-        }}
-      />
-    </FieldArea>
-      {props.children(list)}
-    </>
-  );
+      <>
+        <FieldArea>
+          <Select
+            counter={data.count}
+            onChange={(e) => {
+              setPage(e.target.value);
+            }}
+            page={page}
+          />
+          <Search
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            onClick={event => {
+              setPage(1);
+              setSearch(true);
+            }}
+            onKeyPress={(event) => {
+              if (event.key === 'Enter') {
+                setPage(1);
+                setSearch(true);
+              }
+            }}
+          />
+        </FieldArea>
+        {props.children(list)}
+      </>
+    );
 }

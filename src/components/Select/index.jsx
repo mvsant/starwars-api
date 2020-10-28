@@ -16,7 +16,7 @@ function Select({ counter, onChange, page }) {
       </StyledMenuItem>
     );
   }
-  
+
   return (
     <StyledFormControl>
       <StyledInputLabel>Page</StyledInputLabel>

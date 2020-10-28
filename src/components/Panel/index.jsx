@@ -28,7 +28,7 @@ function Panel(props) {
       <StyledListArea>
         {list.map((item, index) => (
           <li key={index}>
-            {mask(item[0])}: {categoryMask(item[0],item[1])}
+            {mask(item[0])}: {categoryMask(item[0], item[1])}
           </li>
         ))}
       </StyledListArea>
@@ -37,8 +37,8 @@ function Panel(props) {
           typeof item[1] === "string" ? (
             <List key={index} title={item[0]} list={[item[1]]} />
           ) : (
-            <List key={index} title={item[0]} list={item[1]} />
-          )
+              <List key={index} title={item[0]} list={item[1]} />
+            )
         )}
       </StyledImageList>
     </StyledPanelArea>

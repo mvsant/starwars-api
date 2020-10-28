@@ -7,12 +7,12 @@ import {
 } from "./style";
 
 export default function Search(props) {
-  const { value, onChange, onClick,onKeyPress } = props;
+  const { value, onChange, onClick, onKeyPress } = props;
 
   return (
     <StyledSearchContainer>
       <StyledInputLabel>Search</StyledInputLabel>
-      <StyledSearchField 
+      <StyledSearchField
         value={value}
         onChange={onChange}
         onKeyPress={onKeyPress}
