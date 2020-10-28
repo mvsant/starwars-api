@@ -13,13 +13,13 @@ export async function indexFullPath(setData, url) {
 }
 
 export async function nestByOne(setData, parameter) {
-  await fetch(`${baseUrl}${parameter}/`,{cache:"no-cache"})
+  await fetch(`${baseUrl}${parameter}/`)
     .then((response) => response.json())
     .then((data) => setData(data))
 }
 
 export async function nestByPage(setData, parameter, page) {
-  await fetch(`${baseUrl}${parameter}/?search=&page=${page}`,{cache:"no-cache"})
+  await fetch(`${baseUrl}${parameter}/?search=&page=${page}`)
     .then((response) => response.json())
     .then((data) => setData(data));
 }
@@ -31,7 +31,7 @@ export async function nestByCategory(setData, parameter, page) {
 }
 
 export async function nestByQuery(setData, parameter, query, page) {
-  await fetch(`${baseUrl}${parameter}/?search=${query}&page=${page}`,{cache:"no-cache"})
+  await fetch(`${baseUrl}${parameter}/?search=${query}&page=${page}`)
     .then((response) => response.json())
     .then((data) => setData(data))
 }
