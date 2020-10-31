@@ -46,7 +46,7 @@ export function categoryMask(category, item) {
       return `${item / 100} m`;
 
     case "mass":
-      return `${item} Kg`;
+      return item === 'unknown' ? 'unknown':`${item} Kg`;
 
     case "rotation_period":
       return `${item} days`;
@@ -55,34 +55,37 @@ export function categoryMask(category, item) {
       return `${item} days`;
 
     case "diameter":
-      return `${Number(item).toLocaleString()} Km`;
+      return item === 'unknown' ? 'unknown':`${Number(item).toLocaleString()} Km`;
 
     case "surface_water":
       return `${item} %`;
 
     case "population":
-      return `${Number(item).toLocaleString()} habitants`;
+      return item === 'unknown' ? 'unknown':`${Number(item).toLocaleString()} habitants`;
 
     case "cost_in_credits":
-      return `${Number(item).toLocaleString()} credits`;
+      return item === 'unknown' ? 'unknown':`${Number(item).toLocaleString()} credits`;
 
     case "length":
       return `${item} m`;
 
     case "max_atmosphering_speed":
-      return `${Number(item).toLocaleString()} Mph`;
+      return isNaN(item) ? item:`${Number(item).toLocaleString()} Mph`;
+
+    case "passengers":
+      return isNaN(item) ? item:`${Number(item).toLocaleString()} member(s)`;    
 
     case "crew":
       return `${item} member(s)`;
 
     case "cargo_capacity":
-      return `${Number(item).toLocaleString()} ton(s)`;
+      return isNaN(item) ? item:`${Number(item).toLocaleString()} ton(s)`;
 
     case "average_height":
-      return `${item / 100} m`;
+      return item === 'unknown' ? 'unknown':`${item / 100} m`;
 
     case "average_lifespan":
-      return `${item} years`;
+      return item === 'unknown' ? 'unknown':`${item} years`;
 
     default:
       return item;
