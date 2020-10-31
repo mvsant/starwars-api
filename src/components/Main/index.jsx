@@ -5,6 +5,7 @@ import { StyledPanelArea } from "../../styles/commomStyles";
 import Select from "../Select";
 import { FieldArea } from "./style";
 import Search from "../SearchField";
+import TopButton from "../TopButton";
 
 export default function Main(props) {
   const [data, setData] = useState([]);
@@ -66,6 +67,7 @@ export default function Main(props) {
           />
         </FieldArea>
         {props.children(list)}
+<TopButton/>
       </>
     );
 }

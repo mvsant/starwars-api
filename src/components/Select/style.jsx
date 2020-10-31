@@ -21,6 +21,7 @@ export const StyledSelect = styled(Select)`
 
 export const StyledInputLabel = styled(InputLabel)`
   padding-bottom: 1rem;
+  padding-left:1rem;
   &.Mui-focused {
     color: var(--primary-color);
   }
