@@ -23,7 +23,6 @@ function People(props) {
                 item[6],
                 item[7],
               ]}
-              imageList={[item[8], item[9], item[10], item[11], item[12]]}
               origin="people"
               id={references(item[15][1]).id}
             />

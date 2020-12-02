@@ -28,7 +28,6 @@ export default function Starships(props) {
                 item[11],
                 item[12],
               ]}
-              imageList={[item[13], item[14]]}
               origin={path}
               id={references(item[17][1]).id}
             />

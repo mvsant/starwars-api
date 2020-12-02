@@ -24,7 +24,6 @@ export default function Planets(props) {
                 item[7],
                 item[8],
               ]}
-              imageList={[item[9], item[10]]}
               origin={path}
               id={references(item[13][1]).id}
             />

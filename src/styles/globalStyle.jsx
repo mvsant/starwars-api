@@ -32,6 +32,7 @@ body {
   font-family: "Karla", sans-serif;
   background: url(${backgroundImg});
   background-color: black;
+  color:var(--primary-color);
 }
 html, body {
   width: 100%;

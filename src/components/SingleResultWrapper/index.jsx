@@ -15,7 +15,7 @@ export default function SingleResultWrapper(props) {
     nestByOne(setData, path.path);
     return setLoading(false);
   }, [path]);
-  console.log(path.path);
+  
   Object.entries(data).map((item) => list.push(item));
 
   if (data.detail === "Not found") {

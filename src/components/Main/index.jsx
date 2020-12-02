@@ -20,14 +20,13 @@ export default function Main(props) {
   useEffect(() => {
     nestByPage(setData, path.path, page);
     return setLoading(false);
-  }, [page, path])
+  }, [page, path]);
 
   useEffect(() => {
     setLoading(true);
     if (search === true) {
       nestByQuery(setData, path.path, query, page);
       setSearch(false);
-      setQuery('');
       return setLoading(false);
     }
     setLoading(false);
@@ -38,36 +37,42 @@ export default function Main(props) {
   }
 
   return loading === true || list[0] === undefined ? (
-    <StyledPanelArea>
-      <Loading />
-    </StyledPanelArea>
+    data.length === 0 ? (
+      <StyledPanelArea>
+        <Loading />
+      </StyledPanelArea>
+    ) : (
+      <StyledPanelArea>
+        <>No results for: {query} </>
+      </StyledPanelArea>
+    )
   ) : (
-      <>
-        <FieldArea>
-          <Select
-            counter={data.count}
-            onChange={(e) => {
-              setPage(e.target.value);
-            }}
-            page={page}
-          />
-          <Search
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            onClick={event => {
+    <>
+      <FieldArea>
+        <Select
+          counter={data.count}
+          onChange={(e) => {
+            setPage(e.target.value);
+          }}
+          page={page}
+        />
+        <Search
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          onClick={(event) => {
+            setPage(1);
+            setSearch(true);
+          }}
+          onKeyPress={(event) => {
+            if (event.key === "Enter") {
               setPage(1);
               setSearch(true);
-            }}
-            onKeyPress={(event) => {
-              if (event.key === 'Enter') {
-                setPage(1);
-                setSearch(true);
-              }
-            }}
-          />
-        </FieldArea>
-        {props.children(list)}
-<TopButton/>
-      </>
-    );
+            }
+          }}
+        />
+      </FieldArea>
+      {props.children(list)}
+      <TopButton />
+    </>
+  );
 }

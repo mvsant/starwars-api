@@ -13,10 +13,10 @@ function List(props) {
         {(list && list.length === 0) || list === null
           ? "N/A"
           : list.map((item, index) => (
-            <li key={index + Math.random()}>
-              <Miniatures link={item} />
-            </li>
-          ))}
+              <li key={index + Math.random()}>
+                <Miniatures link={item} />
+              </li>
+            ))}
       </ul>
     </StyledListArea>
   );

@@ -33,13 +33,15 @@ function Panel(props) {
         ))}
       </StyledListArea>
       <StyledImageList>
-        {imageList.map((item, index) =>
-          typeof item[1] === "string" ? (
-            <List key={index} title={item[0]} list={[item[1]]} />
-          ) : (
-              <List key={index} title={item[0]} list={item[1]} />
-            )
-        )}
+        {imageList === undefined
+          ? null
+          : imageList.map((item, index) =>
+              typeof item[1] === "string" ? (
+                <List key={index} title={item[0]} list={[item[1]]} />
+              ) : (
+                <List key={index} title={item[0]} list={item[1]} />
+              )
+            )}
       </StyledImageList>
     </StyledPanelArea>
   );

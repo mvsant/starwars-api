@@ -10,7 +10,7 @@ function App() {
       <CssBaseline />
       <GlobalStyle />
       <MuiThemeProvider theme={theme}>
-        <Routes />;
+        <Routes />
       </MuiThemeProvider>
     </StylesProvider>
   );

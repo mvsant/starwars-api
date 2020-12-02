@@ -17,12 +17,12 @@ function Miniatures(props) {
       <Loading />
     </StyledPanelArea>
   ) : (
-      <>
-        <Link to={payload}>
-          <StyledAvatar src={references(link).img} alt={references(link).name} />
-          <h6>{references(link).name}</h6>
-        </Link>
-      </>
-    );
+    <>
+      <Link to={payload}>
+        <StyledAvatar src={references(link).img} alt={references(link).name} />
+        <h6>{references(link).name}</h6>
+      </Link>
+    </>
+  );
 }
 export default Miniatures;

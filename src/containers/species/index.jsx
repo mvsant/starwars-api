@@ -24,7 +24,6 @@ export default function Species(props) {
                 item[7],
                 item[9],
               ]}
-              imageList={[item[8], item[10], item[11]]}
               origin={path}
               id={references(item[14][1]).id}
             />

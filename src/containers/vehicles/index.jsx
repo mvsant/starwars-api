@@ -26,7 +26,6 @@ export default function Vehicles(props) {
                 item[9],
                 item[10],
               ]}
-              imageList={[item[11], item[12]]}
               origin={path}
               id={references(item[15][1]).id}
             />

@@ -14,7 +14,6 @@ export default function Films(props) {
               key={index}
               image={item[13][1]}
               list={[item[0], item[1], item[2], item[3], item[4], item[5]]}
-              imageList={[item[6], item[7], item[8], item[9], item[10]]}
               origin={path}
               id={references(item[13][1]).id}
             />
