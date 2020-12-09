@@ -6,29 +6,25 @@ import { Redirect } from "react-router-dom";
 
 export default function SingleResultWrapper(props) {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
   const list = [];
   const path = props;
 
   useEffect(() => {
-    setLoading(true);
     nestByOne(setData, path.path);
-    return setLoading(false);
   }, [path]);
-  
+
   Object.entries(data).map((item) => list.push(item));
 
   if (data.detail === "Not found") {
-    return <Redirect to="/page_not_found" />
-  }
-  else {
-    return loading === true || list[0] === undefined ? (
+    return <Redirect to="/page_not_found" />;
+  } else {
+    return list[0] === undefined ? (
       <StyledPanelArea>
         <Loading />
       </StyledPanelArea>
     ) : (
-        <>{props.children({ list: list })}</>
-      );
+      <>{props.children({ list: list })}</>
+    );
   }
 }
 /**

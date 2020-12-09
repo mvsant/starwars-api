@@ -23,7 +23,7 @@ export const LoadMessage = styled.div`
 
 export const LoadContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   width:50vw;
 `;

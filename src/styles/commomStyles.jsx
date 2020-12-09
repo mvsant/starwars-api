@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const StyledContainer= styled.div`
+  min-height:80vh;
+`
+
 export const StyledPanelArea = styled.div`
   width: 80%;
   padding: 1%;
