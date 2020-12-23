@@ -9,12 +9,15 @@
 
 API Star wars, created for the study of consumption of APIS.
 
+the results can be find hosted [Here: (https://angry-goodall-1b4c9d.netlify.app/)](https://angry-goodall-1b4c9d.netlify.app/)
+
 This project make use of: 
 
 - React
 - React-router-dom
 - Material-UI
 - Styled-components
+- Netlify host
 
 No patterns were used at the beginning but some will be inserted as needed.
 
