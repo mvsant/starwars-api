@@ -39,127 +39,49 @@ import img72 from "../../assets/images/vehicles_images/Tank_droid_TCW.png";
 import img73 from "../../assets/images/vehicles_images/DroidGunship-DB.png";
 import img76 from "../../assets/images/vehicles_images/AT-RT_BF2.png";
 
-// A pretty ugly hardcoded image seeker
-export default function vehiclesReferences(url) {
-  switch (url) {
-    case "https://swapi.dev/api/vehicles/4/":
-      return { id: 4, img: img4, name: "Sand Crawler" };
-
-    case "https://swapi.dev/api/vehicles/6/":
-      return { id: 6, img: img6, name: "T-16 skyhopper" };
-
-    case "https://swapi.dev/api/vehicles/7/":
-      return { id: 7, img: img7, name: "X-34 landspeeder" };
-
-    case "https://swapi.dev/api/vehicles/8/":
-      return { id: 8, img: img8, name: "TIE/LN starfighter" };
-
-    case "https://swapi.dev/api/vehicles/14/":
-      return { id: 14, img: img14, name: "Snowspeeder" };
-
-    case "https://swapi.dev/api/vehicles/16/":
-      return { id: 16, img: img16, name: "TIE bomber" };
-
-    case "https://swapi.dev/api/vehicles/18/":
-      return { id: 18, img: img18, name: "AT-AT" };
-
-    case "https://swapi.dev/api/vehicles/19/":
-      return { id: 19, img: img19, name: "AT-ST" };
-
-    case "https://swapi.dev/api/vehicles/20/":
-      return { id: 20, img: img20, name: "Storm IV Twin-Pod cloud car" };
-
-    case "https://swapi.dev/api/vehicles/24/":
-      return { id: 24, img: img24, name: "Sail barge" };
-
-    case "https://swapi.dev/api/vehicles/25/":
-      return { id: 25, img: img25, name: "Bantha-II cargo skiff" };
-
-    case "https://swapi.dev/api/vehicles/26/":
-      return { id: 26, img: img26, name: "TIE/IN interceptor" };
-
-    case "https://swapi.dev/api/vehicles/30/":
-      return { id: 30, img: img30, name: "Imperial Speeder Bike" };
-
-    case "https://swapi.dev/api/vehicles/33/":
-      return { id: 33, img: img33, name: "Vulture Droid" };
-
-    case "https://swapi.dev/api/vehicles/34/":
-      return { id: 34, img: img34, name: "Multi-Troop Transport" };
-
-    case "https://swapi.dev/api/vehicles/35/":
-      return { id: 35, img: img35, name: "Armored Assault Tank" };
-
-    case "https://swapi.dev/api/vehicles/36/":
-      return { id: 36, img: img36, name: "Single Trooper Aerial Platform" };
-
-    case "https://swapi.dev/api/vehicles/37/":
-      return { id: 37, img: img37, name: "C-9979 landing craft" };
-
-    case "https://swapi.dev/api/vehicles/38/":
-      return { id: 38, img: img38, name: "Tribubble bongo" };
-
-    case "https://swapi.dev/api/vehicles/42/":
-      return { id: 42, img: img42, name: "Sith speeder" };
-
-    case "https://swapi.dev/api/vehicles/44/":
-      return { id: 44, img: img44, name: "Zephyr-G swoop bike" };
-
-    case "https://swapi.dev/api/vehicles/45/":
-      return { id: 45, img: img45, name: "Koro-2 Exodrive airspeeder" };
-
-    case "https://swapi.dev/api/vehicles/46/":
-      return { id: 46, img: img46, name: "XJ-6 airspeeder" };
-
-    case "https://swapi.dev/api/vehicles/50/":
-      return { id: 50, img: img50, name: "LAAT/i" };
-
-    case "https://swapi.dev/api/vehicles/51/":
-      return { id: 51, img: img51, name: "LAAT/c" };
-
-    case "https://swapi.dev/api/vehicles/53/":
-      return { id: 53, img: img53, name: "AT-TE" };
-
-    case "https://swapi.dev/api/vehicles/54/":
-      return { id: 54, img: img54, name: "SPHA" };
-
-    case "https://swapi.dev/api/vehicles/55/":
-      return { id: 55, img: img55, name: "Flitknot speeder" };
-
-    case "https://swapi.dev/api/vehicles/56/":
-      return { id: 56, img: img56, name: "Neimoidian shuttle" };
-
-    case "https://swapi.dev/api/vehicles/57/":
-      return { id: 57, img: img57, name: "Geonosian starfighter" };
-
-    case "https://swapi.dev/api/vehicles/60/":
-      return { id: 60, img: img60, name: "Tsmeu-6 personal wheel bike" };
-
-    case "https://swapi.dev/api/vehicles/62/":
-      return { id: 62, img: img62, name: "Emergency Firespeeder" };
-
-    case "https://swapi.dev/api/vehicles/67/":
-      return { id: 67, img: img67, name: "Droid tri-fighter" };
-
-    case "https://swapi.dev/api/vehicles/69/":
-      return { id: 69, img: img69, name: "Oevvaor jet catamaran" };
-
-    case "https://swapi.dev/api/vehicles/70/":
-      return { id: 70, img: img70, name: "Raddaugh Gnasp fluttercraft" };
-
-    case "https://swapi.dev/api/vehicles/71/":
-      return { id: 71, img: img71, name: "Clone turbo tank" };
-
-    case "https://swapi.dev/api/vehicles/72/":
-      return { id: 72, img: img72, name: "Corporate Alliance tank droid" };
-
-    case "https://swapi.dev/api/vehicles/73/":
-      return { id: 73, img: img73, name: "Droid gunship" };
-
-    case "https://swapi.dev/api/vehicles/76/":
-      return { id: 76, img: img76, name: "AT-RT" };
-
-    default:
-      return notFound;
+// At this point, it is one switch refactored !!!
+export default function getVehicles(url){
+  const response = {
+    "https://swapi.dev/api/vehicles/4/":{ id: 4, img: img4, name: "Sand Crawler" },
+    "https://swapi.dev/api/vehicles/6/":{ id: 6, img: img6, name: "T-16 skyhopper" },
+    "https://swapi.dev/api/vehicles/7/":{ id: 7, img: img7, name: "X-34 landspeeder" },
+    "https://swapi.dev/api/vehicles/8/":{ id: 8, img: img8, name: "TIE/LN starfighter" },
+    "https://swapi.dev/api/vehicles/14/":{ id: 14, img: img14, name: "Snowspeeder" },
+    "https://swapi.dev/api/vehicles/16/":{ id: 16, img: img16, name: "TIE bomber" },
+    "https://swapi.dev/api/vehicles/18/":{ id: 18, img: img18, name: "AT-AT" },
+    "https://swapi.dev/api/vehicles/19/":{ id: 19, img: img19, name: "AT-ST" },
+    "https://swapi.dev/api/vehicles/20/":{ id: 20, img: img20, name: "Storm IV Twin-Pod cloud car" },
+    "https://swapi.dev/api/vehicles/24/":{ id: 24, img: img24, name: "Sail barge" },
+    "https://swapi.dev/api/vehicles/25/":{ id: 25, img: img25, name: "Bantha-II cargo skiff" },
+    "https://swapi.dev/api/vehicles/26/":{ id: 26, img: img26, name: "TIE/IN interceptor" },
+    "https://swapi.dev/api/vehicles/30/":{ id: 30, img: img30, name: "Imperial Speeder Bike" },
+    "https://swapi.dev/api/vehicles/33/":{ id: 33, img: img33, name: "Vulture Droid" },
+    "https://swapi.dev/api/vehicles/34/":{ id: 34, img: img34, name: "Multi-Troop Transport" },
+    "https://swapi.dev/api/vehicles/35/":{ id: 35, img: img35, name: "Armored Assault Tank" },
+    "https://swapi.dev/api/vehicles/36/":{ id: 36, img: img36, name: "Single Trooper Aerial Platform" },
+    "https://swapi.dev/api/vehicles/37/":{ id: 37, img: img37, name: "C-9979 landing craft" },
+    "https://swapi.dev/api/vehicles/38/":{ id: 38, img: img38, name: "Tribubble bongo" },
+    "https://swapi.dev/api/vehicles/42/":{ id: 42, img: img42, name: "Sith speeder" },
+    "https://swapi.dev/api/vehicles/44/":{ id: 44, img: img44, name: "Zephyr-G swoop bike" },
+    "https://swapi.dev/api/vehicles/45/":{ id: 45, img: img45, name: "Koro-2 Exodrive airspeeder" },
+    "https://swapi.dev/api/vehicles/46/":{ id: 46, img: img46, name: "XJ-6 airspeeder" },
+    "https://swapi.dev/api/vehicles/50/":{ id: 50, img: img50, name: "LAAT/i" },
+    "https://swapi.dev/api/vehicles/51/":{ id: 51, img: img51, name: "LAAT/c" },
+    "https://swapi.dev/api/vehicles/53/":{ id: 53, img: img53, name: "AT-TE" },
+    "https://swapi.dev/api/vehicles/54/":{ id: 54, img: img54, name: "SPHA" },
+    "https://swapi.dev/api/vehicles/55/":{ id: 55, img: img55, name: "Flitknot speeder" },
+    "https://swapi.dev/api/vehicles/56/":{ id: 56, img: img56, name: "Neimoidian shuttle" },
+    "https://swapi.dev/api/vehicles/57/":{ id: 57, img: img57, name: "Geonosian starfighter" },
+    "https://swapi.dev/api/vehicles/60/":{ id: 60, img: img60, name: "Tsmeu-6 personal wheel bike" },
+    "https://swapi.dev/api/vehicles/62/":{ id: 62, img: img62, name: "Emergency Firespeeder" },
+    "https://swapi.dev/api/vehicles/67/":{ id: 67, img: img67, name: "Droid tri-fighter" },
+    "https://swapi.dev/api/vehicles/69/":{ id: 69, img: img69, name: "Oevvaor jet catamaran" },
+    "https://swapi.dev/api/vehicles/70/":{ id: 70, img: img70, name: "Raddaugh Gnasp fluttercraft" },
+    "https://swapi.dev/api/vehicles/71/":{ id: 71, img: img71, name: "Clone turbo tank" },
+    "https://swapi.dev/api/vehicles/72/":{ id: 72, img: img72, name: "Corporate Alliance tank droid" },
+    "https://swapi.dev/api/vehicles/73/":{ id: 73, img: img73, name: "Droid gunship" },
+    "https://swapi.dev/api/vehicles/76/":{ id: 76, img: img76, name: "AT-RT" },
+    "default": notFound,
   }
+  return (response[url]||response["default"]);
 }

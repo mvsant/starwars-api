@@ -37,121 +37,47 @@ import img35 from "../../assets/images/species_images/ShaakTi-TCWs3BR1.png";
 import img36 from "../../assets/images/species_images/Kaleesh-Alien_Archive.jpg";
 import img37 from "../../assets/images/species_images/Pauan.jpg";
 
-// A pretty ugly hardcoded image seeker
-export default function speciesReferences(url) {
-  switch (url) {
-    case "https://swapi.dev/api/species/1/":
-      return { id: 1, img: img1, name: "Human" };
-
-    case "https://swapi.dev/api/species/2/":
-      return { id: 2, img: img2, name: "Droid" };
-
-    case "https://swapi.dev/api/species/3/":
-      return { id: 3, img: img3, name: "Wookiee" };
-
-    case "https://swapi.dev/api/species/4/":
-      return { id: 4, img: img4, name: "Rodian" };
-
-    case "https://swapi.dev/api/species/5/":
-      return { id: 5, img: img5, name: "Hutt" };
-
-    case "https://swapi.dev/api/species/6/":
-      return { id: 6, img: img6, name: "Yoda's species" };
-
-    case "https://swapi.dev/api/species/7/":
-      return { id: 7, img: img7, name: "Trandoshan" };
-
-    case "https://swapi.dev/api/species/8/":
-      return { id: 8, img: img8, name: "Mon Calamari" };
-
-    case "https://swapi.dev/api/species/9/":
-      return { id: 9, img: img9, name: "Ewoks" };
-
-    case "https://swapi.dev/api/species/10/":
-      return { id: 10, img: img10, name: "Sullustan" };
-
-    case "https://swapi.dev/api/species/11/":
-      return { id: 11, img: img11, name: "Neimoidian" };
-
-    case "https://swapi.dev/api/species/12/":
-      return { id: 12, img: img12, name: "Gungan" };
-
-    case "https://swapi.dev/api/species/13/":
-      return { id: 13, img: img13, name: "Toydarian" };
-
-    case "https://swapi.dev/api/species/14/":
-      return { id: 14, img: img14, name: "Dug" };
-
-    case "https://swapi.dev/api/species/15/":
-      return { id: 15, img: img15, name: "Twi'lek" };
-
-    case "https://swapi.dev/api/species/16/":
-      return { id: 16, img: img16, name: "Aleena" };
-
-    case "https://swapi.dev/api/species/17/":
-      return { id: 17, img: img17, name: "Vulptereen" };
-
-    case "https://swapi.dev/api/species/18/":
-      return { id: 18, img: img18, name: "Xexto" };
-
-    case "https://swapi.dev/api/species/19/":
-      return { id: 19, img: img19, name: "Toong" };
-
-    case "https://swapi.dev/api/species/20/":
-      return { id: 20, img: img20, name: "Cerean" };
-
-    case "https://swapi.dev/api/species/21/":
-      return { id: 21, img: img21, name: "Nautolan" };
-
-    case "https://swapi.dev/api/species/22/":
-      return { id: 22, img: img22, name: "Zabrak" };
-
-    case "https://swapi.dev/api/species/23/":
-      return { id: 23, img: img23, name: "Tholothian" };
-
-    case "https://swapi.dev/api/species/24/":
-      return { id: 24, img: img24, name: "Iktotchi" };
-
-    case "https://swapi.dev/api/species/25/":
-      return { id: 25, img: img25, name: "Quermian" };
-
-    case "https://swapi.dev/api/species/26/":
-      return { id: 26, img: img26, name: "Kel Dor" };
-
-    case "https://swapi.dev/api/species/27/":
-      return { id: 27, img: img27, name: "Chagrian" };
-
-    case "https://swapi.dev/api/species/28/":
-      return { id: 28, img: img28, name: "Geonosian" };
-
-    case "https://swapi.dev/api/species/29/":
-      return { id: 29, img: img29, name: "Mirialan" };
-
-    case "https://swapi.dev/api/species/30/":
-      return { id: 30, img: img30, name: "Clawdite" };
-
-    case "https://swapi.dev/api/species/31/":
-      return { id: 31, img: img31, name: "Besalisk" };
-
-    case "https://swapi.dev/api/species/32/":
-      return { id: 32, img: img32, name: "Kaminoan" };
-
-    case "https://swapi.dev/api/species/33/":
-      return { id: 33, img: img33, name: "Skakoan" };
-
-    case "https://swapi.dev/api/species/34/":
-      return { id: 34, img: img34, name: "Muun" };
-
-    case "https://swapi.dev/api/species/35/":
-      return { id: 35, img: img35, name: "Togruta" };
-
-    case "https://swapi.dev/api/species/36/":
-      return { id: 36, img: img36, name: "Kaleesh" };
-
-    case "https://swapi.dev/api/species/37/":
-      return { id: 37, img: img37, name: "Pau'an" };
-
-    default:
-      return notFound;
+// At this point, it is one switch refactored !!!
+export default function getSpecies(url){
+  const response = {
+    "https://swapi.dev/api/species/1/":{ id: 1, img: img1, name: "Human" },
+    "https://swapi.dev/api/species/2/":{ id: 2, img: img2, name: "Droid" },
+    "https://swapi.dev/api/species/3/":{ id: 3, img: img3, name: "Wookiee" },
+    "https://swapi.dev/api/species/4/":{ id: 4, img: img4, name: "Rodian" },
+    "https://swapi.dev/api/species/5/":{ id: 5, img: img5, name: "Hutt" },
+    "https://swapi.dev/api/species/6/":{ id: 6, img: img6, name: "Yoda's species" },
+    "https://swapi.dev/api/species/7/":{ id: 7, img: img7, name: "Trandoshan" },
+    "https://swapi.dev/api/species/8/":{ id: 8, img: img8, name: "Mon Calamari" },
+    "https://swapi.dev/api/species/9/":{ id: 9, img: img9, name: "Ewoks" },
+    "https://swapi.dev/api/species/10/":{ id: 10, img: img10, name: "Sullustan" },
+    "https://swapi.dev/api/species/11/":{ id: 11, img: img11, name: "Neimoidian" },
+    "https://swapi.dev/api/species/12/":{ id: 12, img: img12, name: "Gungan" },
+    "https://swapi.dev/api/species/13/":{ id: 13, img: img13, name: "Toydarian" },
+    "https://swapi.dev/api/species/14/":{ id: 14, img: img14, name: "Dug" },
+    "https://swapi.dev/api/species/15/":{ id: 15, img: img15, name: "Twi'lek" },
+    "https://swapi.dev/api/species/16/":{ id: 16, img: img16, name: "Aleena" },
+    "https://swapi.dev/api/species/17/":{ id: 17, img: img17, name: "Vulptereen" },
+    "https://swapi.dev/api/species/18/":{ id: 18, img: img18, name: "Xexto" },
+    "https://swapi.dev/api/species/19/":{ id: 19, img: img19, name: "Toong" },
+    "https://swapi.dev/api/species/20/":{ id: 20, img: img20, name: "Cerean" },
+    "https://swapi.dev/api/species/21/":{ id: 21, img: img21, name: "Nautolan" },
+    "https://swapi.dev/api/species/22/":{ id: 22, img: img22, name: "Zabrak" },
+    "https://swapi.dev/api/species/23/":{ id: 23, img: img23, name: "Tholothian" },
+    "https://swapi.dev/api/species/24/":{ id: 24, img: img24, name: "Iktotchi" },
+    "https://swapi.dev/api/species/25/":{ id: 25, img: img25, name: "Quermian" },
+    "https://swapi.dev/api/species/26/":{ id: 26, img: img26, name: "Kel Dor" },
+    "https://swapi.dev/api/species/27/":{ id: 27, img: img27, name: "Chagrian" },
+    "https://swapi.dev/api/species/28/":{ id: 28, img: img28, name: "Geonosian" },
+    "https://swapi.dev/api/species/29/":{ id: 29, img: img29, name: "Mirialan" },
+    "https://swapi.dev/api/species/30/":{ id: 30, img: img30, name: "Clawdite" },
+    "https://swapi.dev/api/species/31/":{ id: 31, img: img31, name: "Besalisk" },
+    "https://swapi.dev/api/species/32/":{ id: 32, img: img32, name: "Kaminoan" },
+    "https://swapi.dev/api/species/33/":{ id: 33, img: img33, name: "Skakoan" },
+    "https://swapi.dev/api/species/34/":{ id: 34, img: img34, name: "Muun" },
+    "https://swapi.dev/api/species/35/":{ id: 35, img: img35, name: "Togruta" },
+    "https://swapi.dev/api/species/36/":{ id: 36, img: img36, name: "Kaleesh" },
+    "https://swapi.dev/api/species/37/":{ id: 37, img: img37, name: "Pau'an" },
+    "default": notFound,
   }
+  return (response[url]||response["default"]);
 }

@@ -21,6 +21,6 @@ export function references(url) {
   } else if (url.match(/species/g)) {
     return speciesReferences(url);
   } else {
-    return "erro";
+    return "error";
   }
 }
