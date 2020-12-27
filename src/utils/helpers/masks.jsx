@@ -39,55 +39,25 @@ export function mask(name) {
   return name.replace(/[_-]/g, " ");
 }
 
-// It's messy but works !!!
-export function categoryMask(category, item) {
-  switch (category) {
-    case "height":
-      return `${item / 100} m`;
-
-    case "mass":
-      return item === 'unknown' ? 'unknown':`${item} Kg`;
-
-    case "rotation_period":
-      return `${item} days`;
-
-    case "orbital_period":
-      return `${item} days`;
-
-    case "diameter":
-      return item === 'unknown' ? 'unknown':`${Number(item).toLocaleString()} Km`;
-
-    case "surface_water":
-      return `${item} %`;
-
-    case "population":
-      return item === 'unknown' ? 'unknown':`${Number(item).toLocaleString()} habitants`;
-
-    case "cost_in_credits":
-      return item === 'unknown' ? 'unknown':`${Number(item).toLocaleString()} credits`;
-
-    case "length":
-      return `${item} m`;
-
-    case "max_atmosphering_speed":
-      return isNaN(item) ? item:`${Number(item).toLocaleString()} Mph`;
-
-    case "passengers":
-      return isNaN(item) ? item:`${Number(item).toLocaleString()} member(s)`;    
-
-    case "crew":
-      return `${item} member(s)`;
-
-    case "cargo_capacity":
-      return isNaN(item) ? item:`${Number(item).toLocaleString()} ton(s)`;
-
-    case "average_height":
-      return item === 'unknown' ? 'unknown':`${item / 100} m`;
-
-    case "average_lifespan":
-      return item === 'unknown' ? 'unknown':`${item} years`;
-
-    default:
-      return item;
+// At this point, it is one switch refactored !!!
+export function categoryMask(category,item){
+ item = {
+    "height": `${item / 100} m`,
+    "mass": item === 'unknown' ? 'unknown':`${item} Kg`,
+    "rotation_period": `${item} days`,
+    "orbital_period": `${item} days`,
+    "diameter": item === 'unknown' ? 'unknown':`${Number(item).toLocaleString()} Km`,
+    "surface_water": item === 'unknown' ? 'unknown':`${item} %`,
+    "population": item === 'unknown' ? 'unknown':`${Number(item).toLocaleString()} habitants`,
+    "cost_in_credits": item === 'unknown' ? 'unknown':`${Number(item).toLocaleString()} credits`,
+    "length": `${item} m`,
+    "max_atmosphering_speed": isNaN(item) ? item:`${Number(item).toLocaleString()} Mph`,
+    "passengers": isNaN(item) ? item:`${Number(item).toLocaleString()} member(s)`,
+    "crew": `${item} member(s)`,
+    "cargo_capacity": isNaN(item) ? item:`${Number(item).toLocaleString()} ton(s)`,
+    "average_height": item === 'unknown' ? 'unknown':`${item / 100} m`,
+    "average_lifespan": item === 'unknown' ? 'unknown':`${item} years`,
+    "default": item,
   }
+  return (item[category]||item["default"]);
 }
