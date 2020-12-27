@@ -14,8 +14,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 function Navbar(props) {
   const [toggle, setToggle] = useState(false);
   const location = useLocation();
-
-  console.log(location);
+  
   return (
     <StyledHeader>
       {location.pathname === "/" ? null : (

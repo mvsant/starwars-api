@@ -41,7 +41,7 @@ export default function Main(props) {
     ) : (
       <StyledContainer>
         <StyledPanelArea>
-          <>No results for: {query} </>
+          <p><b>No results for: {query}, in this category.</b></p>
         </StyledPanelArea>
       </StyledContainer>
     )
