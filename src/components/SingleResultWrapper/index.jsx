@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Loading from "../Loading";
-import { StyledPanelArea } from "../../styles/commomStyles";
+import { StyledContainer, StyledPanelArea } from "../../styles/commomStyles";
 import { nestByOne } from "../../utils/api";
 import { Redirect } from "react-router-dom";
 
@@ -19,9 +19,11 @@ export default function SingleResultWrapper(props) {
     return <Redirect to="/page_not_found" />;
   } else {
     return list[0] === undefined ? (
-      <StyledPanelArea>
-        <Loading />
-      </StyledPanelArea>
+      <StyledContainer>
+        <StyledPanelArea>
+          <Loading />
+        </StyledPanelArea>
+      </StyledContainer>
     ) : (
       <>{props.children({ list: list })}</>
     );

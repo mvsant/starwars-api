@@ -46,7 +46,7 @@ export default function Main(props) {
       </StyledContainer>
     )
   ) : (
-    <>
+    <StyledContainer>
       <FieldArea>
         <Select
           counter={data.count}
@@ -72,6 +72,6 @@ export default function Main(props) {
       </FieldArea>
       {props.children(list)}
       <TopButton />
-    </>
+    </StyledContainer>
   );
 }
