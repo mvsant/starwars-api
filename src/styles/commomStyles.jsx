@@ -68,8 +68,7 @@ export const StyledPanelImage = styled.img`
   object-position: 80% 5%;
   border-radius: 5%;
   height: 200px;
-  width: 150px;
-  order: -1;
+  max-width: 250px;
   margin: auto 5%;
 `;
 
