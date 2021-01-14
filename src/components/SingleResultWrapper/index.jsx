@@ -32,7 +32,7 @@ export default function SingleResultWrapper(props) {
 /**
  The child will receive props.list because the object is composed manually:
  props.children({ list: list })
- Otherwise it will be the porps prop itself:
+ Otherwise it will be the props prop itself:
  props.children(list) Will be props in child.
  NOTE: You can destructure your variable as permitted in Javascript.
  **
