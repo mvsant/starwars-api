@@ -3,8 +3,7 @@ import Miniatures from "../Miniatures";
 import { mask } from "../../utils/helpers/masks";
 import { StyledListArea } from "../../styles/commomStyles";
 
-function List(props) {
-  const { list, title } = props;
+function List({ list, title }) {
 
   return (
     <StyledListArea>

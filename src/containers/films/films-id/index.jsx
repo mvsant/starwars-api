@@ -3,8 +3,8 @@ import Panel from "../../../components/Panel";
 import { references } from "../../../utils/references/references";
 import SingleResultWrapper from "../../../components/SingleResultWrapper";
 
-export default function FilmsId(props) {
-  const path = props.location.pathname.substring(1);
+export default function FilmsId({location}) {
+  const path = location.pathname.substring(1);
 
   return (
     <SingleResultWrapper path={path}>

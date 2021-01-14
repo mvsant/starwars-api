@@ -4,14 +4,15 @@ import { StyledContainer, StyledPanelArea } from "../../styles/commomStyles";
 import { nestByOne } from "../../utils/api";
 import { Redirect } from "react-router-dom";
 
-export default function SingleResultWrapper(props) {
+export default function SingleResultWrapper({path, children}) {
   const [data, setData] = useState([]);
   const list = [];
-  const path = props;
 
   useEffect(() => {
-    nestByOne(setData, path.path);
+    nestByOne(setData, path);
   }, [path]);
+
+  console.log(path);
 
   Object.entries(data).map((item) => list.push(item));
 
@@ -25,7 +26,7 @@ export default function SingleResultWrapper(props) {
         </StyledPanelArea>
       </StyledContainer>
     ) : (
-      <>{props.children({ list: list })}</>
+      <>{children({ list: list })}</>
     );
   }
 }

@@ -5,8 +5,7 @@ import { urlMask } from "../../utils/helpers/masks";
 import { StyledPanelArea, StyledAvatar } from "../../styles/commomStyles";
 import Loading from "../Loading";
 
-function Miniatures(props) {
-  const { link } = props;
+function Miniatures({ link }) {
 
   const payload = {
     pathname: `${urlMask(link)}/${references(link).id}`,

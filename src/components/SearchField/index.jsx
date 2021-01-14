@@ -7,8 +7,7 @@ import {
 } from "./style";
 import SearchIcon from '@material-ui/icons/Search';
 
-export default function Search(props) {
-  const { value, onChange, onClick, onKeyPress } = props;
+export default function Search({ value, onChange, onClick, onKeyPress }) {
 
   return (
     <StyledSearchContainer>

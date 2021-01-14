@@ -11,7 +11,7 @@ import Options from "./Options";
 import CloseIcon from "@material-ui/icons/Close";
 import MenuIcon from "@material-ui/icons/Menu";
 
-function Navbar(props) {
+function Navbar() {
   const [toggle, setToggle] = useState(false);
   const location = useLocation();
   

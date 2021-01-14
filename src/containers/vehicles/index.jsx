@@ -3,8 +3,8 @@ import Panel from "../../components/Panel";
 import { references } from "../../utils/references/references";
 import Main from "../../components/Main";
 
-export default function Vehicles(props) {
-  const path = props.location.pathname.substring(1);
+export default function Vehicles({location}) {
+  const path = location.pathname.substring(1);
   return (
     <>
       <Main path={path}>

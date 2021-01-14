@@ -3,8 +3,8 @@ import Panel from "../../components/Panel";
 import { references } from "../../utils/references/references";
 import Main from "../../components/Main";
 
-function People(props) {
-  const path = props.location.pathname.substring(1);
+function People({location}) {
+  const path = location.pathname.substring(1);
   return (
     <>
       <Main path={path}>

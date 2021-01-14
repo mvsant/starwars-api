@@ -10,8 +10,7 @@ import {
   StyledImageList,
 } from "../../styles/commomStyles";
 
-function Panel(props) {
-  const { image, list, imageList, origin, id } = props;
+function Panel({ image, list, imageList, origin, id }) {
   const payload = {
     pathname: `/${origin}/${id}`,
     category: `${origin}`,

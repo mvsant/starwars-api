@@ -7,22 +7,21 @@ import { FieldArea } from "./style";
 import Search from "../SearchField";
 import TopButton from "../TopButton";
 
-export default function Main(props) {
+export default function Main({path, children}) {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState(false);
   const [query, setQuery] = useState("");
   const results = data.results;
-  const path = props;
   const list = [];
 
   useEffect(() => {
-    nestByPage(setData, path.path, page);
+    nestByPage(setData, path, page);
   }, [page, path]);
 
   useEffect(() => {
     if (search === true) {
-      nestByQuery(setData, path.path, query, page);
+      nestByQuery(setData, path, query, page);
       setSearch(false);
     }
   }, [path, page, search, query]);
@@ -70,7 +69,7 @@ export default function Main(props) {
           }}
         />
       </FieldArea>
-      {props.children(list)}
+      {children(list)}
       <TopButton />
     </StyledContainer>
   );
