@@ -1,7 +1,7 @@
 import React from "react";
 import { index, baseUrl } from "../../utils/api";
 import { Link } from "react-router-dom";
-import { urlMask, namesMask } from "../../utils/helpers/masks";
+import { urlMask, mask } from "../../utils/helpers/masks";
 import { references } from "../../utils/references/references";
 import Card from "../../components/Card";
 import { StyledHome, StyledHomeList } from "./style";
@@ -25,7 +25,7 @@ function Home() {
           {Object.entries(data).map((item, index) => (
             <Link key={index} to={urlMask(item[1])}>
               <Card
-                title={namesMask(item[0])}
+                title={mask(item[0])}
                 img={references(baseUrl + item[0] + "/4/").img}
               ></Card>
             </Link>

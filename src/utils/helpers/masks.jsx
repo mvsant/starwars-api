@@ -1,22 +1,3 @@
-export function namesMask(url) {
-  switch (url) {
-    case "people":
-      return "People";
-    case "films":
-      return "Films";
-    case "planets":
-      return "Planets";
-    case "vehicles":
-      return "Vehicles";
-    case "starships":
-      return "Starships";
-    case "species":
-      return "Species";
-    default:
-      return url;
-  }
-}
-
 export function urlMask(url) {
   const extract = url.slice(20, -1);
   return extract;

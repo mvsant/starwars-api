@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { namesMask } from "../../utils/helpers/masks";
+import { mask } from "../../utils/helpers/masks";
 import { activeStyle } from "./style";
 
 const pages = [
@@ -18,7 +18,7 @@ export default function Options() {
       {pages.map((item) => (
         <li key={item}>
           <NavLink activeStyle={activeStyle} to={'/'+item}>
-            {namesMask(item)}
+            {mask(item)}
           </NavLink>
         </li>
       ))}
