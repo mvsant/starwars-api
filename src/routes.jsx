@@ -16,6 +16,7 @@ import SpeciesId from "./containers/species/species-id";
 import PlanetsId from "./containers/planets/planets-id";
 import FilmsId from "./containers/films/films-id";
 import Footer from "./components/Footer";
+import About from "./containers/About";
 
 export default function Routes() {
   return (
@@ -34,6 +35,7 @@ export default function Routes() {
         <Route path="/people/:id" component={PeopleId} />
         <Route exact path="/planets" component={Planets} />
         <Route path="/planets/:id" component={PlanetsId} />
+        <Route exact path="/about" component={About} />
         <Route path="/page_not_found" component={page404} />
         <Route exact path="/" component={Home} />
         <Route path="*" component={page404} status={404} />

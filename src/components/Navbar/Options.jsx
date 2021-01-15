@@ -10,6 +10,7 @@ const pages = [
   "vehicles",
   "starships",
   "species",
+  "about",
 ];
 export default function Options() {
   return (
