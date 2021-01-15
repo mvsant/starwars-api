@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { urlMask, mask } from "../../utils/helpers/masks";
 import { references } from "../../utils/references/references";
 import Card from "../../components/Card";
-import { StyledHome, StyledHomeList } from "./style";
+import { StyledHome, StyledHomeList, StyledLink } from "./style";
 
 function Home() {
   let [data, setData] = React.useState(""); // state hook
@@ -21,6 +21,7 @@ function Home() {
       <StyledHome>
         <h1>Welcome to Stars Wars API!</h1>
         <h2>Dive into some SW informations:</h2>
+        <h2><StyledLink to="/about">About</StyledLink></h2>
         <StyledHomeList>
           {Object.entries(data).map((item, index) => (
             <Link key={index} to={urlMask(item[1])}>

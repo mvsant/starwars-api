@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Card from "../../components/Card";
 
@@ -41,3 +42,11 @@ export const StyledHomeList = styled.div`
   }
   }
 `;
+
+export const StyledLink = styled(Link)`
+color: var(--primary-color);
+text-decoration:none;
+:visited {
+  color: var(--primary-color-dark);
+}
+`
