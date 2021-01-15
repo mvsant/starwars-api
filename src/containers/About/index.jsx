@@ -1,6 +1,6 @@
 import { StyledInner, StyledLogo, StyledOuter } from "./style";
 import logo from "../../assets/star.png";
-import { useEffect } from "react";
+import React,{ useEffect } from "react";
 
 export default function About() {
 
