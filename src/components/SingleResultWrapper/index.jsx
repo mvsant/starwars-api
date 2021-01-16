@@ -10,6 +10,7 @@ export default function SingleResultWrapper({path, children}) {
 
   useEffect(() => {
     nestByOne(setData, path);
+    window.scrollTo(0, 0);
   }, [path]);
 
   console.log(path);
