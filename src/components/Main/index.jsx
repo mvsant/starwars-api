@@ -7,7 +7,7 @@ import { FieldArea } from "./style";
 import Search from "../SearchField";
 import TopButton from "../TopButton";
 
-export default function Main({path, children}) {
+export default function Main({ path, children }) {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState(false);
@@ -17,6 +17,7 @@ export default function Main({path, children}) {
 
   useEffect(() => {
     nestByPage(setData, path, page);
+    window.scrollTo(0, 0);
   }, [page, path]);
 
   useEffect(() => {
@@ -40,7 +41,9 @@ export default function Main({path, children}) {
     ) : (
       <StyledContainer>
         <StyledPanelArea>
-          <p><b>No results for: {query}, in this category.</b></p>
+          <p>
+            <b>No results for: {query}, in this category.</b>
+          </p>
         </StyledPanelArea>
       </StyledContainer>
     )
