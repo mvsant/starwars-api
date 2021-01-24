@@ -27,7 +27,7 @@ I loved so much work in that way, and I don't consider being judged by the resul
 
 All images belong to their respective owners and are protected under legal terms.
 
-Baner source: [https://fontmeme.com/star-wars-font/](https://fontmeme.com/star-wars-font/)
+Banner source: [https://fontmeme.com/star-wars-font/](https://fontmeme.com/star-wars-font/)
 
 Icon source: [https://toppng.com/file-jedi-logo-png-jedi-order-2j-PNG-free-PNG-Images_269036](https://toppng.com/file-jedi-logo-png-jedi-order-2j-PNG-free-PNG-Images_269036)
 
