@@ -1,5 +1,5 @@
 export function urlMask(url) {
-  const extract = url.slice(20, -1);
+  const extract = url.slice(22, -1);
   return extract;
 }
 
