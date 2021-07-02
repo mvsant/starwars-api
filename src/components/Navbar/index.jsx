@@ -10,11 +10,17 @@ import {
 import Options from "./Options";
 import CloseIcon from "@material-ui/icons/Close";
 import MenuIcon from "@material-ui/icons/Menu";
+import { index } from "../../utils/api";
 
 function Navbar() {
   const [toggle, setToggle] = useState(false);
   const location = useLocation();
-  
+  let [data, setData] = React.useState(""); // state hook
+
+  React.useEffect(() => {
+    index(setData);
+  }, []);
+
   return (
     <StyledHeader>
       {location.pathname === "/" ? null : (
@@ -31,11 +37,11 @@ function Navbar() {
       </Link>
       {location.pathname === "/" ? null : toggle ? (
         <StyledNav>
-          <Options />
+          <Options data={data} />
         </StyledNav>
       ) : (
         <StyledNav visibility="none">
-          <Options />
+          <Options data={data} />
         </StyledNav>
       )}
     </StyledHeader>

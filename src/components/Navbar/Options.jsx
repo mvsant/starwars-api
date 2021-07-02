@@ -1,24 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { mask } from "../../utils/helpers/masks";
+import { mask, urlMask } from "../../utils/helpers/masks";
 import { activeStyle } from "./style";
 
-const pages = [
-  "people",
-  "planets",
-  "films",
-  "vehicles",
-  "starships",
-  "species",
-  "about",
-];
-export default function Options() {
+//console.log(pages);
+export default function Options({ data }) {
   return (
     <ul>
-      {pages.map((item) => (
+      {Object.entries(data).map((item, index) => (
         <li key={item}>
-          <NavLink activeStyle={activeStyle} to={'/'+item}>
-            {mask(item)}
+          <NavLink activeStyle={activeStyle} to={urlMask(item[1])}>
+            {mask(item[0])}
           </NavLink>
         </li>
       ))}
