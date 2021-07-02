@@ -6,6 +6,8 @@
 
 # Star Wars API
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d7f92dd0-24fd-4541-8589-564ff1346fac/deploy-status)](https://app.netlify.com/sites/angry-goodall-1b4c9d/deploys)
+
 
 API Star wars, created for the study of consumption of APIS.
 
