@@ -2,8 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { mask, urlMask } from "../../utils/helpers/masks";
 import { activeStyle } from "./style";
-
-//console.log(pages);
 export default function Options({ data }) {
   return (
     <ul>

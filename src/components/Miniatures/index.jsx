@@ -8,7 +8,7 @@ import Loading from "../Loading";
 function Miniatures({ link }) {
 
   const payload = {
-    pathname: `${urlMask(link)}`,
+    pathname: `/${urlMask(link)}`,
   };
 
   return link === undefined ? (

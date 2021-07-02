@@ -13,8 +13,6 @@ export default function SingleResultWrapper({path, children}) {
     window.scrollTo(0, 0);
   }, [path]);
 
-  console.log(path);
-
   Object.entries(data).map((item) => list.push(item));
 
   if (data.detail === "Not found") {
