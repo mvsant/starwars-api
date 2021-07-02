@@ -5,12 +5,12 @@ export const StyledContainer= styled.div`
 `
 
 export const StyledPanelArea = styled.div`
-  width: 80%;
+  width: 95%;
   padding: 1%;
-  margin: 2% auto;
+  margin:2% auto;
   background-color: var(--transparency-dark);
   border: 2px solid var(--primary-color);
-  border-radius: 2%;
+  border-radius: 3%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
@@ -18,7 +18,7 @@ export const StyledPanelArea = styled.div`
     "image list list"
     "image list list "
     "image_list image_list image_list ";
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 890px) {
     width: 99%;
     grid-template-areas:
       ". image ."
@@ -37,6 +37,7 @@ export const StyledAvatar = styled.img`
 
 export const StyledListArea = styled.div`
   grid-area: list;
+  padding:2%;
   width: 100%;
   opacity: 1;
   color: white;

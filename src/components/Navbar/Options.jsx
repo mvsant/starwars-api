@@ -7,7 +7,7 @@ export default function Options({ data }) {
     <ul>
       {Object.entries(data).map((item, index) => (
         <li key={item}>
-          <NavLink activeStyle={activeStyle} to={urlMask(item[1])}>
+          <NavLink activeStyle={activeStyle} to={`/${urlMask(item[1])}`}>
             {mask(item[0])}
           </NavLink>
         </li>
