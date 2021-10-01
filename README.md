@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://rubyonrails.org">
+  <a href="https://github.com/marlonveiga-santos/starwars-api">
     <img src="./src/assets/star.png" width="230">
   </a>
 </div>
@@ -11,7 +11,7 @@
 
 API Star wars, created for the study of consumption of APIS.
 
-the results can be find hosted [Here: (https://angry-goodall-1b4c9d.netlify.app/)](https://angry-goodall-1b4c9d.netlify.app/)
+the results can be find hosted [Here: (https://star-wars-info.netlify.app/)](https://star-wars-info.netlify.app/)
 
 This project make use of: 
 
